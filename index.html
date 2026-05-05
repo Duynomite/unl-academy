@@ -5224,8 +5224,10 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
           <div>
             <h2 className="font-heading font-bold text-2xl text-secondary mb-3">How the reimbursement works</h2>
             <p className="text-text leading-relaxed mb-4">
-              Member fills a prescription at any pharmacy. Pays the copay or full price out of pocket. Submits the
-              receipt to UNL via email (claims@unlinsurance.com). UNL reimburses the member by check or direct deposit.
+              Member fills a prescription at any pharmacy — at any cost, including $0 copay through their MA plan.
+              Submits the receipt (showing pharmacy + drug + insured + date + Rx code) to UNL via email
+              (claims@unlinsurance.com). UNL reimburses the member by check or direct deposit at the fixed per-fill
+              amount, regardless of what the member paid at the pharmacy.
             </p>
 
             <div className="bg-white border border-light-cyan rounded-lg p-5 mb-4">
@@ -5234,8 +5236,40 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
                 <li>• <span className="font-heading font-semibold">$10 back per generic fill</span></li>
                 <li>• <span className="font-heading font-semibold">$25 back per brand-name fill</span></li>
                 <li>• Capped annually by tier: $300 (A) / $600 (B) / $900 (C)</li>
+                <li>• <span className="font-heading font-semibold">No per-drug frequency cap</span> — only the annual tier cap applies</li>
                 <li>• Member can fill any pharmacy, any drug class, any tier (subject to standard exclusions like compounded/specialty in some cases — pending full UNL clarification)</li>
               </ul>
+            </div>
+
+            <div className="bg-accent/10 border-l-4 border-accent rounded-r-lg p-5 mb-4">
+              <div className="font-heading font-bold text-secondary mb-2 text-base">⚡ The $0-copay bonus — load-bearing for sales framing</div>
+              <p className="text-text text-sm leading-relaxed mb-2">
+                The reimbursement pays the fixed amount per fill <span className="font-heading font-semibold">regardless of what the customer paid at the pharmacy.</span>
+                There's no exclusion for $0 copays, manufacturer copay-assistance programs, Medicaid coverage,
+                or any other payer source. <span className="font-heading font-semibold">A customer whose MA plan covers their prescriptions
+                at $0 copay still receives the full per-fill check.</span>
+              </p>
+              <p className="text-text text-sm leading-relaxed">
+                This means the disqualifier is <span className="font-heading font-semibold">"doesn't fill prescriptions,"</span>
+                not <span className="font-heading font-semibold">"doesn't pay for prescriptions."</span> A prospect with 4 free
+                generics a month doesn't have "no Rx pain to fix" — they have <span className="font-heading font-semibold">$40/month of pure-cash reimbursement</span>
+                they couldn't get any other way. Don't disqualify $0-copay prospects on Rx grounds.
+              </p>
+            </div>
+
+            <div className="bg-accent/10 border-l-4 border-accent rounded-r-lg p-5 mb-4">
+              <div className="font-heading font-bold text-secondary mb-2 text-base">⚡ Fill cadence — ask explicitly: "monthly or quarterly?"</div>
+              <p className="text-text text-sm leading-relaxed mb-2">
+                Reimbursement is <span className="font-heading font-semibold">per fill, not per month</span>. A 90-day supply counts as 1 fill, not 3.
+                A prospect on 4 generics filled monthly = <span className="font-heading font-semibold">48 fills/yr × $10 = $480/yr</span> potential.
+                Same prospect on 90-day fills = <span className="font-heading font-semibold">16 fills × $10 = $160/yr</span>.
+                <span className="font-heading font-semibold"> 3× difference</span> from the same medication list, just on cadence.
+              </p>
+              <p className="text-text text-sm leading-relaxed">
+                <span className="font-heading font-semibold">Cadence flips the tier.</span> 5 generics filled monthly = $600/yr potential → Plan B sweet spot.
+                Same 5 generics filled quarterly = $200/yr → Plan A only (under cap, even Plan A has unused room). Always confirm
+                fill cadence in Stage 2A — it's the difference between recommending the right tier and leaving money on the table.
+              </p>
             </div>
 
             <p className="text-text leading-relaxed">
@@ -6502,7 +6536,8 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
               stage="Engagement · Situation questions (2-3 of these)"
               lines={[
                 { text: `"Just so I'm in the right place — about how many medications are you on regularly, roughly?"` },
-                { text: `"Got it. About what does that run you out of pocket each month, all-in?"` },
+                { text: `"Got it. And when you fill those — are you doing 30-day refills or 90-day supplies?"`, note: 'Load-bearing for the math. Reimbursement is per FILL, not per month — a 90-day supply is 1 fill, not 3. Same med count + different cadence = different tier fit. A prospect on 5 monthly fills is a Plan B fit; same 5 quarterly is Plan A only. Always ask cadence before recommending tier.' },
+                { text: `"About what does that run you out of pocket each month, all-in?"`, note: 'After cadence — even a $0 OOP answer is fine; the reimbursement pays regardless of pharmacy cost (see §1.7).' },
                 { text: `"And your current Medicare Advantage plan — what carrier and roughly what does the inpatient cost-share look like?"`, note: 'Skip if you already enrolled them in MA on this call.' },
               ]}
             />
@@ -6551,8 +6586,8 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
                   note: 'Three bullets, no more. Order matters: HHC value first, family second, prescription THIRD. Validate at the seam ("does that match what you were hoping for?") before doing the math.',
                 },
                 {
-                  text: `"On premium — bear with me, I'm going to give you the gross number first and then the math that actually matters. For someone your age, the plan typically runs around $[50-65] a month, depending on the specific options we set up. Now here's the part that surprises most folks — since you mentioned you're already taking [X] prescriptions, that prescription benefit covers most of the premium back. Real cost ends up around $[3-5] a month for someone in your situation. So to recap — for $[3-5] a month real cost, you've got $[50K/100K/150K] of home healthcare protection, $3,500 directly to [family member] if they end up caring for you, and the prescription benefit covering most of the premium. Sound fair?"`,
-                  note: 'The "bear with me, gross first then the math that matters" pre-frame mitigates sticker shock when the $50-65 lands. Use RANGES, not point estimates ($50-65 not $54.20; $3-5 not $3.50). Premium varies by state, age, gender, benefit period — quoting a specific number sets up a credibility break later. The summary at the end re-anchors to their own words.',
+                  text: `"On premium — bear with me, I'm going to give you the gross number first and then the math that actually matters. For someone your age, the plan typically runs around $[50-65] a month, depending on the specific options we set up. Now here's the part that surprises most folks — since you mentioned you're already filling [X] prescriptions, that prescription benefit pays you back $10 a generic and $25 a brand on every fill. That's true even if your plan covers them at $0 copay — you still get the check. Real cost ends up around $[3-5] a month for someone in your situation. So to recap — for $[3-5] a month real cost, you've got $[50K/100K/150K] of home healthcare protection, $3,500 directly to [family member] if they end up caring for you, and the prescription benefit covering most of the premium. Sound fair?"`,
+                  note: 'The "bear with me, gross first then the math that matters" pre-frame mitigates sticker shock when the $50-65 lands. Use RANGES, not point estimates ($50-65 not $54.20; $3-5 not $3.50). Premium varies by state, age, gender, benefit period — quoting a specific number sets up a credibility break later. The "$0 copay still gets the check" clarification is load-bearing — handles the prospect who says "my plan covers my prescriptions" preemptively, AND closes the gap that prospects with no Rx OOP would otherwise be disqualified from. Disqualifier is "doesn\'t fill prescriptions," not "doesn\'t pay for prescriptions."',
                 },
               ]}
             />
@@ -6622,7 +6657,7 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
       );
     }
 
-    // Hoisted to module scope so the 43-frame array literal isn't reallocated
+    // Hoisted to module scope so the 51-frame array literal isn't reallocated
     // on every Section_2_5 keystroke. Names are unique within the dataset
     // (verified by Layer 1 T14 + Phase 10 audit) so we can use them as React keys.
     const PITCH_FRAMES = [
@@ -6645,6 +6680,8 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
         { category: 'Rx', name: 'Polypharmacy frame', deploy: 'Stage 2 · Problem awareness · multi-med prospect', text: '"About 40% of folks 65+ are taking 5 or more prescriptions regularly, and around 1 in 5 of those folks have skipped a fill in the past year because of cost. Has that ever happened to you, or someone in your family?"', research: 'CDC NHIS: ~40% of seniors take 5+ prescriptions; ~20% experience cost-related non-adherence.' },
         { category: 'Rx', name: 'Brand-name no-generic frame', deploy: 'Stage 2 · Problem awareness · brand-name med prospect', text: '"Brand-name medications without a generic — like Eliquis, Jardiance, the GLP-1s — those are the ones that load up your monthly out-of-pocket. Even with the new Part D cap, the monthly hit can still be $50-100 per drug. About what does yours run?"', research: 'KFF / Avalere: brand-name maintenance drugs without generics drive senior OOP exposure.' },
         { category: 'Rx', name: 'Eliquis-specific frame', deploy: 'Stage 2 · for prospects on Eliquis', text: '"Eliquis is on the new Medicare-negotiated drug list, but the OOP can still run $50-80 a month depending on your plan. The $25 back per fill from the prescription benefit takes a real chunk out of that."', research: 'Eliquis is one of 10 negotiated drugs effective Jan 1 2026, ~56% list price reduction; OOP varies by plan structure.' },
+        { category: 'Rx', name: 'The $0-copay bonus frame', deploy: 'Stage 2-4 · prospect with $0 Rx copays through their MA plan', text: '"Even better — even if your plan covers your prescriptions at $0 copay through your Part D, the reimbursement still pays. $10 a generic and $25 a brand on every fill, regardless of what you paid at the pharmacy. So you\'re getting paid back for prescriptions you\'re already getting for free. With your [4] meds a month, that\'s about $[40-50] of pure cash to you, every month, on top of the home healthcare coverage."', research: 'Per Connor 2026-05-05: UNL pays the per-fill reimbursement with proof of fill only — no exclusion for $0 copays, manufacturer copay-assistance, or Medicaid coverage. Receipt amount is not a factor; only proof of fill matters. No per-drug frequency cap. This means $0-copay prospects are NOT disqualified — they\'re among the cleanest fits because the reimbursement is pure-cash income on top of free prescriptions. Closes the "I don\'t pay for my prescriptions" objection that would otherwise make the math reframe land flat.' },
+        { category: 'Rx', name: 'The fill-cadence question', deploy: 'Stage 2A · Situation · ALWAYS ask after med count', text: '"Quick one — when you fill those, are you doing 30-day refills or 90-day supplies? That actually matters more than people think."', research: 'Reimbursement is per FILL, not per month. A 90-day supply counts as 1 fill, not 3. A prospect on 4 generics filled monthly = 48 fills/yr × $10 = $480/yr potential. Same prospect on 90-day fills = 16 fills × $10 = $160/yr — a 3× difference from the same medication list, just on cadence. Same med count + different cadence = different tier fit (5 monthly = Plan B; same 5 quarterly = Plan A only, under cap). NOT casual conversation — this is the load-bearing question that determines the math. Without it, agents recommend wrong-tier products that leave premium unreimbursed. Per Connor 2026-05-05.' },
 
         // Method frames
         { category: 'Method', name: 'Cost-of-one-meal frame', deploy: 'Stage 4 · close', text: '"Roughly $3.50 a month is about one fast-food meal per month. For that, you\'ve got $100,000 in home healthcare coverage if you ever needed care, a $3,500 family caregiver benefit, and a prescription benefit that\'s already paying back most of the premium. Sound fair?"', research: 'Concrete reference points improve cognitive uptake (cognitive load theory; small-number reframing literature). Frames the HHC coverage and family benefit as the value, with Rx as the offset — not as the headline product.' },
