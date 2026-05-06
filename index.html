@@ -3093,8 +3093,8 @@
         <div>
           <h2 className="font-heading font-semibold text-2xl text-secondary mb-2">State Availability</h2>
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
-            <div className="font-heading font-semibold text-amber-800 text-sm mb-2">⚠ State availability is in flux — always verify with the UNL Advocate before quoting.</div>
-            <p className="text-amber-900 text-sm">UNL has two source documents that disagree on HHC state availability — the Shield Series matrix (Rev 11/12/2025) and a newer GTL Agency Product Table (Rev 4/24/2026). The newer document shows HHC in 10+ more states than the older one. The Academy currently uses the Shield Series matrix data; <span className="font-heading font-semibold">if a prospect is in a state not on the Shield matrix's available list (e.g., WI, MT, MD, UT, AK, CT, DC, HI, OR, RI), do not assume the product is unavailable — verify with the Advocate first</span>.</p>
+            <div className="font-heading font-semibold text-amber-800 text-sm mb-2">⚠ Verify state availability with the UNL Advocate before quoting.</div>
+            <p className="text-amber-900 text-sm">The Academy uses UNL's Shield Series matrix (Rev 11/12/2025) — the authoritative UNL source. UNL's public website lists Wisconsin as available for HHC while the Shield matrix marks WI as not available; this single conflict is unresolved and should be confirmed with the Advocate. <span className="font-heading font-semibold">If a prospect is in a state not on the Shield matrix's available list (e.g., WI, MT, MD, UT, AK, CT, DC, HI, OR, RI), do not assume the product is unavailable without checking — verify with the Advocate first</span>.</p>
           </div>
           <p className="text-mid-blue text-sm mb-6">Based on UNL's Shield Series state matrix ({STATE_RULES_DATE}). Always confirm current status with the UNL Advocate before quoting.</p>
 
@@ -3840,8 +3840,8 @@
               </p>
               <p className="text-text text-sm leading-relaxed mb-3">
                 It also includes <span className="font-heading font-semibold">$3,500 paid directly to a family member</span> who
-                cares for them, plus <span className="font-heading font-semibold">prescription reimbursement</span> ($300, $600, or $900/year
-                back to the member depending on the tier).
+                cares for them, plus <span className="font-heading font-semibold">prescription reimbursement</span> at $10/generic
+                + $25/brand on every fill, capped annually by tier ($300/$600/$900) — typically offsets most of the policy premium.
               </p>
               <p className="text-text text-sm leading-relaxed">
                 "TCare" is the name of the care-coordination service that comes with the policy — a team that helps the family
@@ -4141,7 +4141,7 @@
               <div className="text-[10px] uppercase tracking-wider text-secondary font-heading font-semibold mb-1">The mental model</div>
               <p className="text-sm text-text leading-relaxed">
                 HI = "I got admitted to a hospital, here's a stack of cash for the days I was there."{' '}
-                HHC = "I need help at home, here's daily cash + a check for whoever's helping me + my prescriptions partially refunded + a coordinator who actually plans my care."
+                HHC = "I need help at home, here's daily cash + a check for whoever's helping me + Rx reimbursement on every fill + a coordinator who actually plans my care."
               </p>
             </div>
           </div>
@@ -4165,8 +4165,8 @@
               <li>• Help with cooking, cleaning, transportation to doctor's appointments, or any non-medical support.</li>
             </ul>
             <p className="text-text leading-relaxed mb-4">
-              Around <span className="font-heading font-semibold">70% of adults aged 65+ will need some form of long-term
-              care services</span> in their lifetime, per Department of Health and Human Services data. About 20% will
+              Around <span className="font-heading font-semibold">70% of adults aged 65+ will need some form of help
+              at home</span> in their lifetime, per Department of Health and Human Services data. About 20% will
               need it for 5+ years. The vast majority of that care is delivered at home, and the vast majority of it
               is not covered by Medicare or Medicare Advantage.
             </p>
@@ -4534,7 +4534,7 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
             <p className="text-text leading-relaxed mb-4">
               Start with the financial reality. Around <span className="font-heading font-semibold">37% of Americans
               would struggle to cover a $400 unexpected expense</span> per the Federal Reserve's annual SHED survey.
-              For seniors specifically — median household income around $30,000, mostly Social Security — the number
+              For seniors specifically — median individual income around $30,000, mostly Social Security — the number
               gets worse, not better. Around 21% of seniors over 65 still spend $1,000+/year out-of-pocket on healthcare
               even with Medicare or MA coverage.
             </p>
@@ -5164,8 +5164,9 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
           <div>
             <h2 className="font-heading font-bold text-2xl text-secondary mb-3">Where HHC is and isn't available</h2>
             <p className="text-text leading-relaxed mb-4">
-              State availability for HHC is in flux as of mid-2026 — UNL has been expanding the footprint and two source
-              documents disagree on current status. The Academy flags this; always verify with the UNL Advocate before quoting.
+              State availability follows UNL's Shield Series matrix (Rev Nov 2025) — the authoritative source. UNL's public
+              website lists Wisconsin as available for HHC while the matrix marks it not available; that single conflict is
+              unresolved. Always verify current status with the UNL Advocate before quoting any state outside the matrix's available list.
             </p>
             <div className="bg-white border border-light-cyan rounded-lg p-5">
               <ul className="space-y-2 text-sm text-text">
@@ -6664,7 +6665,7 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
     const PITCH_FRAMES = [
         // HI frames
         { category: 'HI', name: 'Daily-copay gap frame', deploy: 'Stage 2 · Problem awareness · cross-sell', text: '"Your Medicare Advantage plan is great — but most plans leave a $200-$400 daily copay for the first week of any hospital stay. Did that come up when you were comparing plans?"', research: 'KFF MA market analysis: typical inpatient cost-share $300-400/day for first 5-7 days; ~42% of seniors 75-84 are hospitalized in any given year (HCUP).' },
-        { category: 'HI', name: 'Five-day math frame', deploy: 'Stage 2 · Consequence · cross-sell', text: '"A 5-day stay at $325/day is $1,625 the member owes the hospital out of pocket. For a household running on $2,500/month of Social Security, that hit is two months of squeezed budget. Could that work for you, or would that be a real squeeze?"', research: 'Median senior household income ~$30K/yr (Census). 37% of Americans struggle with $400 unexpected expense (Federal Reserve SHED).' },
+        { category: 'HI', name: 'Five-day math frame', deploy: 'Stage 2 · Consequence · cross-sell', text: '"A 5-day stay at $325/day is $1,625 the member owes the hospital out of pocket. For a fixed-income retiree running on $2,500/month of Social Security, that hit is two months of squeezed budget. Could that work for you, or would that be a real squeeze?"', research: 'Median individual income for adults 65+ ~$30K/yr (Census; household figure for 65+ households is ~$50K). 37% of Americans struggle with $400 unexpected expense (Federal Reserve SHED).' },
         { category: 'HI', name: 'Cash-clarity frame', deploy: 'Stage 4 · Presentation', text: '"This isn\'t the kind of insurance that pays the hospital — it pays YOU. Cash, in your hand, the day you get admitted. You can use it for the copay, for groceries during recovery, for whoever\'s helping you at home. It\'s your money to spend however you need."', research: 'Indemnity vs major medical distinction. Cash benefits typically not taxable (IRS).' },
         { category: 'HI', name: 'MA-didn\'t-think-about frame', deploy: 'Stage 2 · Problem awareness', text: '"Your plan covered the part that costs the most — the actual hospital bill. Smart move. But it didn\'t think about the part that costs YOU when something happens. That\'s where this fits."', research: 'Coverage vs cash distinction; out-of-pocket exposure remains even with MOOP.' },
 
@@ -8181,13 +8182,13 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
       { category: 'MA copay structure', stat: 'KFF in-network MOOP median (2024)', value: '$4,882', source: 'KFF Medicare Advantage 2024 Data' },
       { category: 'MA copay structure', stat: 'SNF coinsurance after hospital discharge (days 21+, 2025)', value: '$209.50/day', source: 'CMS / Medicare.gov — verify current-year value annually (2024: $204; 2025: $209.50)' },
 
-      // Aging and long-term care
-      { category: 'Long-term care', stat: 'Adults turning 65 today who will need some LTC', value: '~70%', source: 'HHS Administration for Community Living' },
-      { category: 'Long-term care', stat: 'Adults 65+ who will need significant LTC', value: '~56%', source: 'HHS ACL' },
-      { category: 'Long-term care', stat: 'Adults 65+ who will need LTC for 5+ years', value: '~20%', source: 'HHS ACL' },
-      { category: 'Long-term care', stat: 'ADL impairment prevalence ages 65–74', value: '~8%', source: 'NHATS / NIA' },
-      { category: 'Long-term care', stat: 'ADL impairment prevalence ages 75–84', value: '~19%', source: 'NHATS' },
-      { category: 'Long-term care', stat: 'ADL impairment prevalence ages 85+', value: '~39%', source: 'NHATS' },
+      // Aging and help-at-home need (HHS calls this LTSS)
+      { category: 'Help at home', stat: 'Adults turning 65 today who will need help at home (LTSS)', value: '~70%', source: 'HHS Administration for Community Living' },
+      { category: 'Help at home', stat: 'Adults 65+ who will need significant help at home', value: '~56%', source: 'HHS ACL' },
+      { category: 'Help at home', stat: 'Adults 65+ who will need help at home for 5+ years', value: '~20%', source: 'HHS ACL' },
+      { category: 'Help at home', stat: 'ADL impairment prevalence ages 65–74', value: '~8%', source: 'NHATS / NIA' },
+      { category: 'Help at home', stat: 'ADL impairment prevalence ages 75–84', value: '~19%', source: 'NHATS' },
+      { category: 'Help at home', stat: 'ADL impairment prevalence ages 85+', value: '~39%', source: 'NHATS' },
 
       // Home care cost
       { category: 'Home-care cost', stat: 'Median annual cost of home health aide (2024)', value: '~$77,792', source: 'Genworth / CareScout Cost of Care Survey' },
@@ -8222,9 +8223,9 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
       { category: 'Cost of care', stat: 'Medicare skilled nursing facility coverage cap (post-hospitalization)', value: '~100 days', source: 'Medicare.gov / 42 CFR 409.61. Days 1-20 covered in full, days 21-100 with daily coinsurance, day 101+ not covered.' },
       { category: 'Cost of care', stat: 'Medicare home health benefit (long-term care)', value: 'Very limited', source: 'Medicare.gov: covers part-time skilled care after a hospitalization or under specific conditions; does NOT cover ongoing custodial home care.' },
 
-      // Lifetime LTC need
-      { category: 'Long-term care risk', stat: 'Adults turning 65 today who will need some form of LTC in their lifetime', value: '~70%', source: 'HHS Administration for Community Living LTC need probability' },
-      { category: 'Long-term care risk', stat: 'Adults 65+ who will need significant LTC (2+ years)', value: '~56%', source: 'HHS Administration for Community Living' },
+      // Lifetime help-at-home need
+      { category: 'Help at home', stat: 'Adults turning 65 today who will need help at home in their lifetime', value: '~70%', source: 'HHS Administration for Community Living LTSS need probability' },
+      { category: 'Help at home', stat: 'Adults 65+ who will need significant help at home (2+ years)', value: '~56%', source: 'HHS Administration for Community Living' },
     ];
 
     function StatBankView() {
@@ -8421,7 +8422,7 @@ UNL HHC Shield       ✅ Pays cash too        ✅ COVERED
             <h2 className="font-heading font-bold text-2xl text-secondary mb-2">Rx Reimbursement Calculator</h2>
             <p className="text-text leading-relaxed">
               Enter the prospect&apos;s medication count and fill cadence. The calculator shows annual reimbursement potential
-              and net cost across all three HHC tiers. <span className="font-heading font-semibold">The lowest-net-cost tier is highlighted as &ldquo;best fit.&rdquo;</span>
+              and net cost across all three HHC tiers. <span className="font-heading font-semibold">The best-value tier (highest HHC coverage per $1 net) is highlighted as &ldquo;best fit.&rdquo;</span>
             </p>
           </div>
 
