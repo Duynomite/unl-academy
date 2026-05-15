@@ -149,6 +149,65 @@
     .mc-placeholder::before { content: '⏳'; filter: grayscale(0.3); }
 
     /* ============================================================
+       PILLAR 1 TEACHING CONTENT — Read the Customer
+       (also reused in Pillars 3 + 4)
+       ============================================================ */
+
+    /* Sub-unit heading */
+    .mc-h4 { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.02rem; color: #2D5A7A; letter-spacing: 0.01em; margin: 1.6rem 0 0.55rem; }
+
+    /* Teaching list */
+    .mc-list { font-family: "Jost", sans-serif; font-size: 1rem; line-height: 1.75; color: #34252F; margin: 0.4rem 0 1.2rem 1.4rem; padding: 0; max-width: 42rem; }
+    .mc-list li { margin-bottom: 0.55rem; }
+    .mc-list li strong { color: #2D5A7A; font-weight: 600; }
+
+    /* Callout box — primary teaching aside */
+    .mc-callout { background: rgba(45,90,122,0.04); border-left: 3px solid #2D5A7A; border-radius: 0 0.5rem 0.5rem 0; padding: 0.95rem 1.25rem 1rem; margin: 1.35rem 0; font-family: "Jost", sans-serif; font-size: 0.95rem; line-height: 1.7; color: #34252F; max-width: 42rem; }
+    .mc-callout-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.65rem; letter-spacing: 0.14em; color: #2D5A7A; text-transform: uppercase; display: block; margin-bottom: 0.4rem; }
+    .mc-callout strong { color: #2D5A7A; font-weight: 600; }
+    .mc-callout em { font-style: italic; }
+    .mc-callout--warn { background: rgba(201,122,31,0.05); border-left-color: #C97A1F; }
+    .mc-callout--warn .mc-callout-label { color: #8B5413; }
+
+    /* Side-by-side comparison */
+    .mc-side-by-side { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.4rem 0; max-width: 50rem; }
+    @media (min-width: 720px) { .mc-side-by-side { grid-template-columns: 1fr 1fr; gap: 1.15rem; } }
+    .mc-side { background: white; border: 1px solid #D8E6E3; border-radius: 0.6rem; padding: 1.05rem 1.2rem 1.25rem; }
+    .mc-side--bad { border-left: 3px solid #C97A1F; }
+    .mc-side--good { border-left: 3px solid #3DCEB2; }
+    .mc-side-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.45rem; }
+    .mc-side--bad .mc-side-label { color: #8B5413; }
+    .mc-side--good .mc-side-label { color: #2D5A7A; }
+    .mc-side-title { font-family: "Urbanist", sans-serif; font-weight: 600; font-size: 0.98rem; color: #2D5A7A; margin-bottom: 0.65rem; line-height: 1.3; }
+
+    /* Pacing line — dialogue with cadence markers */
+    .mc-pacing-line { font-family: "Jost", sans-serif; font-size: 0.94rem; line-height: 1.8; color: #34252F; padding: 0.4rem 0; margin: 0; border-bottom: 1px dashed rgba(75,119,151,0.18); }
+    .mc-pacing-line:last-child { border-bottom: none; padding-bottom: 0; }
+    .mc-pacing-line .mark { font-family: "JetBrains Mono", monospace; font-style: italic; font-size: 0.76rem; color: #4B7797; background: rgba(75,119,151,0.08); padding: 0.05rem 0.42rem 0.08rem; border-radius: 3px; margin: 0 0.15rem; letter-spacing: 0.01em; white-space: nowrap; }
+    .mc-pacing-line .spk { display: block; font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 0.7rem; color: #2D5A7A; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.15rem; }
+
+    /* Internal state block — "what the agent is thinking" */
+    .mc-internal-state { background: linear-gradient(135deg, rgba(45,90,122,0.045) 0%, rgba(61,206,178,0.06) 100%); border: 1px solid rgba(45,90,122,0.14); border-radius: 0.6rem; padding: 1.1rem 1.35rem 1.2rem; margin: 1.4rem 0; font-family: "Jost", sans-serif; font-style: italic; font-size: 0.97rem; line-height: 1.75; color: #34252F; max-width: 42rem; position: relative; }
+    .mc-internal-state::before { content: 'INTERNAL'; position: absolute; top: -0.55rem; left: 1.15rem; background: #FBFAF7; padding: 0 0.5rem; font-family: "Urbanist", sans-serif; font-style: normal; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; color: #2D5A7A; }
+    .mc-internal-state strong { color: #2D5A7A; font-style: normal; font-weight: 600; }
+
+    /* Signal card — compact buying/resistance signal */
+    .mc-signal-card { display: grid; grid-template-columns: auto 1fr; gap: 0.65rem 1.05rem; align-items: start; background: white; border: 1px solid #D8E6E3; border-radius: 0.55rem; padding: 0.9rem 1.1rem 1rem; margin-bottom: 0.65rem; max-width: 46rem; }
+    .mc-signal-num { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 0.85rem; color: #3DCEB2; background: #10202C; width: 1.7rem; height: 1.7rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .mc-signal-cue { font-family: "Jost", sans-serif; font-weight: 500; font-size: 0.97rem; color: #34252F; margin-bottom: 0.3rem; line-height: 1.5; }
+    .mc-signal-cue em { font-style: italic; color: #2D5A7A; font-weight: 500; }
+    .mc-signal-move { font-family: "Jost", sans-serif; font-size: 0.87rem; color: #4B7797; line-height: 1.55; }
+    .mc-signal-move-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.58rem; letter-spacing: 0.16em; color: #2D5A7A; text-transform: uppercase; margin-right: 0.45rem; }
+
+    /* Mini-script — compact objection / curveball exchange */
+    .mc-mini-script { background: white; border: 1px solid #D8E6E3; border-left: 3px solid #2D5A7A; border-radius: 0 0.55rem 0.55rem 0; padding: 0.95rem 1.2rem 1.05rem; margin-bottom: 0.8rem; max-width: 46rem; }
+    .mc-mini-num { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.16em; color: #4B7797; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .mc-mini-cue { font-family: "Jost", sans-serif; font-style: italic; font-size: 0.96rem; line-height: 1.55; color: #34252F; margin-bottom: 0.65rem; padding: 0.15rem 0 0.15rem 0.85rem; border-left: 2px solid #C97A1F; }
+    .mc-mini-response { font-family: "Jost", sans-serif; font-weight: 500; font-size: 0.95rem; line-height: 1.65; color: #34252F; margin-bottom: 0.6rem; padding: 0.15rem 0 0.15rem 0.85rem; border-left: 2px solid #3DCEB2; }
+    .mc-mini-why { font-family: "Jost", sans-serif; font-size: 0.84rem; line-height: 1.55; color: #4B7797; }
+    .mc-mini-why-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.58rem; letter-spacing: 0.16em; color: #2D5A7A; text-transform: uppercase; margin-right: 0.4rem; }
+
+    /* ============================================================
        FULL SCRIPT — the heart of Pillar 2
        ============================================================ */
     .mc-script {
@@ -486,6 +545,80 @@
       .mc-grid { grid-template-columns: 1fr; }
       body { background: white; }
     }
+
+    /* ============ UNL NEXT-STEP CTA (shared across all 4 tools) ============ */
+    .unl-next-step {
+      margin: 3rem 0 2rem;
+      padding: 1.85rem 2rem 2rem;
+      background: linear-gradient(135deg, #2D5A7A 0%, #10202C 100%);
+      color: white;
+      border-radius: 0.85rem;
+      box-shadow: 0 6px 20px rgba(16,32,44,0.14);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.75rem;
+      align-items: center;
+    }
+    .unl-next-step-eyebrow {
+      font-family: "Urbanist", sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      color: #3DCEB2;
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
+    .unl-next-step h3 {
+      font-family: "Urbanist", sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: white;
+      margin-bottom: 0.45rem;
+      line-height: 1.2;
+    }
+    .unl-next-step p {
+      font-family: "Jost", sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      margin: 0;
+      line-height: 1.55;
+      max-width: 38rem;
+    }
+    .unl-next-step-actions { display: flex; flex-direction: column; gap: 0.55rem; align-items: flex-end; }
+    .unl-next-step-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.65rem;
+      background: #3DCEB2;
+      color: #10202C;
+      font-family: "Urbanist", sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.15s;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .unl-next-step-btn:hover { background: #2db89e; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(61,206,178,0.35); }
+    .unl-next-step-btn svg { width: 1rem; height: 1rem; }
+    .unl-next-step-secondary {
+      font-family: "Urbanist", sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .unl-next-step-secondary:hover { color: rgba(255,255,255,0.85); }
+    @media (max-width: 640px) {
+      .unl-next-step { grid-template-columns: 1fr; padding: 1.4rem 1.4rem 1.55rem; gap: 1.1rem; }
+      .unl-next-step h3 { font-size: 1.15rem; }
+      .unl-next-step-actions { align-items: flex-start; }
+      .unl-next-step-btn { padding: 0.8rem 1.4rem; font-size: 0.85rem; }
+    }
+    @media print { .unl-next-step { display: none !important; } }
   </style>
 </head>
 
@@ -672,23 +805,258 @@
 
           <p class="mc-body">A great script delivered by an agent who can't read the room is just noise. This pillar trains the underlying perception — tonality, pace, pause, the specific phrases that signal a buyer is leaning in or pulling back. By the end, you'll know how to adjust your delivery in real time based on what you're hearing.</p>
 
-          <h3 class="mc-h3" style="margin-top: 2rem;">The units</h3>
+          <!-- ============ UNIT 1.1 ============ -->
+          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.1 · The seven-second test</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">What you can tell about a prospect in their first seven seconds — and how to adjust your opener accordingly.</div></div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.1 · The seven-second test</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">What you can tell about a prospect in their first 7 seconds — and how to adjust your opener accordingly.</div></div>
+          <p class="mc-body">By the time the prospect says hello and one short sentence, you already have four pieces of data. Most agents miss them because they're rehearsing their script. The agents who listen first close more.</p>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.2 · Tonality matching</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">Mirror pace, energy, formality. The senior-call principle: always pace below the prospect, never above.</div></div>
+          <h4 class="mc-h4">What you can read in seven seconds</h4>
+          <ul class="mc-list">
+            <li><strong>Voice quality.</strong> Clear vs. muffled, energetic vs. flat, formal vs. casual. Tells you their state.</li>
+            <li><strong>First phrase.</strong> "Yeah?" vs. "This is Robert" vs. "Hello, who's calling?" Tells you their guard level.</li>
+            <li><strong>Breath pattern.</strong> Steady vs. hurried vs. labored. Tells you whether they have time and headspace.</li>
+            <li><strong>Background context.</strong> TV in the background, traffic, a dog barking, silence. Tells you what else is competing for their attention.</li>
+          </ul>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.3 · Buying signals — the eight verbal cues</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">Specific phrases and behaviors that mean "they're ready to close." How to recognize them and pivot accordingly.</div></div>
+          <h4 class="mc-h4">How to adjust your opener</h4>
+          <ul class="mc-list">
+            <li><strong>Hurried or agitated</strong> → "Did I catch you at a bad time?" Always — even if you think you didn't.</li>
+            <li><strong>Flat or passive</strong> → Match their low energy. Don't try to lift them with your enthusiasm; they'll perceive it as pressure.</li>
+            <li><strong>Formal</strong> (uses "Mr." or "Mrs." themselves) → Mirror the formality through the whole call. Don't get familiar.</li>
+            <li><strong>Suspicious or edgy</strong> → Lead with compliance signals: "This is a recorded line — I'm a licensed agent calling back the request you submitted."</li>
+          </ul>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.4 · Resistance signals — when they're pulling back</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">The six cues of disengagement. Defensive contractions, time-stalling, vague answers — and the move that recovers from each.</div></div>
+          <div class="mc-callout">
+            <span class="mc-callout-label">The doctrine</span>
+            The first seven seconds aren't selling time — they're <strong>listening time</strong>. Every agent who rushes through hello to get to their script is paying a tax they don't know they're paying.
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.5 · The "calm expert" persona</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">Internalizing the NEPQ-required tone. What it sounds like vs. what eager-and-fast sounds like. Why this is half the call.</div></div>
+          <!-- ============ UNIT 1.2 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">1.2 · Tonality matching</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">Mirror pace, energy, formality. The senior-call principle: always pace below the prospect, never above.</div></div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.6 · Reading silence</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">When to wait. When to fill. When to ask a clarifying question. The discipline most agents never develop.</div></div>
+          <p class="mc-body">At ages 65 to 85, average comprehension speed is roughly 30% slower than at 45. If you talk at your normal sales pace, the prospect is processing the first half of your sentence while you're already three sentences ahead. They're not slow — they're operating at normal age-cognition speed against unnatural agent pace.</p>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.7 · The mid-call self-check</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">A 4-question internal audit you run on yourself at minute 5 of every call. Stops you from missing what's actually happening.</div></div>
+          <p class="mc-body"><strong>Senior-call principle: always pace below the prospect, never above.</strong> Match their tempo at the start, then gently pull the whole conversation down by 10-15%. They'll follow you without noticing, and they'll feel heard the entire way.</p>
 
-          <div class="mc-placeholder">Content for these units coming in Phase 3.</div>
+          <h4 class="mc-h4">Same line, two ways</h4>
+
+          <div class="mc-side-by-side">
+            <div class="mc-side mc-side--bad">
+              <div class="mc-side-label">Eager-fast (avoid)</div>
+              <div class="mc-side-title">No pauses, permission tucked away as a formality</div>
+              <p class="mc-pacing-line"><span class="spk">Agent — quick, upbeat</span>Hi Mr. Hendricks this is Sarah I'm calling about the Medicare benefits I noticed you signed up for so I just wanted to double check a few things real quick is that okay?</p>
+            </div>
+            <div class="mc-side mc-side--good">
+              <div class="mc-side-label">Calm-expert (use)</div>
+              <div class="mc-side-title">Clear pauses, real permission gate, respectful out</div>
+              <p class="mc-pacing-line"><span class="spk">Agent — soft, paced</span>Hi Mr. Hendricks. <span class="mark">[pause 1s]</span> This is Sarah from Clear Path Coverage. <span class="mark">[pause 0.5s]</span> Quick courtesy call — <span class="mark">[match his pace]</span> do you have a minute, or did I catch you at a bad time?</p>
+            </div>
+          </div>
+
+          <p class="mc-body">The difference comes down to breath. The eager-fast version forces you to rush — by the end you're almost gasping. The calm-expert version lets you breathe between phrases. Your prospect can hear that difference even if they can't name it.</p>
+
+          <h4 class="mc-h4">Three pacing techniques</h4>
+          <ul class="mc-list">
+            <li><strong>Match-and-pace.</strong> Start at their tempo. Over the first 60 seconds, pull the conversation down 10-15%. They follow without noticing.</li>
+            <li><strong>The deliberate pause.</strong> A one-second pause after a question forces the prospect to fill it. Agents who fear silence kill their own discovery.</li>
+            <li><strong>Soften the stress.</strong> When you're about to say something the prospect might resist — price, knockout question, anything sensitive — <em>drop your volume slightly</em>. Senior prospects hear "louder" as "pushier."</li>
+          </ul>
+
+          <div class="mc-callout mc-callout--warn">
+            <span class="mc-callout-label">The most common mistake</span>
+            Matching their nervous energy upward instead of pulling it down. If a prospect sounds anxious, don't match anxious — <strong>anchor calm</strong>. You're not mirroring their state; you're modeling the state you want them to settle into.
+          </div>
+
+          <!-- ============ UNIT 1.3 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">1.3 · Buying signals — the eight verbal cues</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">Specific phrases and behaviors that mean "they're ready." How to recognize them and pivot from pitch to handoff.</div></div>
+
+          <p class="mc-body">Most agents miss buying signals because they're still selling. The signal lands, the agent keeps pitching benefits, the prospect's open window closes, and the agent never knows why the call dried up. When you hear any of the eight cues below, your job switches from "convince" to "execute the handoff."</p>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">1</div>
+            <div>
+              <div class="mc-signal-cue"><em>"How does this work exactly?"</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Stop talking about benefits. Start describing the application steps and what happens next.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">2</div>
+            <div>
+              <div class="mc-signal-cue"><em>"What would my monthly be?"</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Deliver the Rx-net-cost reframe. Don't lead with gross premium — pre-frame it as the number that doesn't matter, then land the net.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">3</div>
+            <div>
+              <div class="mc-signal-cue"><em>"Could I add my wife too?"</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Confirm she's also on Medicare. Then pivot to a brief spouse discovery — her Rx mix, her health, separate underwriting.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">4</div>
+            <div>
+              <div class="mc-signal-cue"><em>"When would it start?"</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Explain the effective date plainly. Pre-set the underwriting and Advocate handoff so the transition feels expected, not jarring.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">5</div>
+            <div>
+              <div class="mc-signal-cue"><em>"What happens if I cancel?"</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Address it freely — no long-term commitment, free-look period, money back. Then turn to the next step. Hesitating signals there's something to hide.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">6</div>
+            <div>
+              <div class="mc-signal-cue"><em>"Hmm — that's not bad."</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Micro-close: "Do you feel this is the answer for you?" Don't keep selling. They've already nodded internally.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">7</div>
+            <div>
+              <div class="mc-signal-cue"><em>"What do you need from me?"</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Assumptive transition to the Advocate handoff. They're already past the decision — your job is to make the next step painless.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">8</div>
+            <div>
+              <div class="mc-signal-cue"><em>A pause of three or more seconds after you describe the benefit.</em></div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Move</span>Don't fill it. They're internalizing — let them speak first. The agent who waits four seconds wins the sale more often than the agent who jumps in at two.</div>
+            </div>
+          </div>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The pattern beneath the signals</span>
+            The fastest way to lose a buying signal is to <strong>keep selling past it</strong>. When you hear one, your job changes — you're no longer convincing, you're executing. Recognize the shift and let the close happen.
+          </div>
+
+          <!-- ============ UNIT 1.4 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">1.4 · Resistance signals — when they're pulling back</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">The six cues of disengagement. Defensive contractions, time-stalling, vague answers — and the recovery move for each.</div></div>
+
+          <p class="mc-body">Resistance is data, not failure. The six cues below tell you exactly where rapport broke — and each has a specific recovery move. Recovery means rebuilding rapport before re-pitching, never re-pitching over the resistance.</p>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">1</div>
+            <div>
+              <div class="mc-signal-cue"><strong>Defensive contractions.</strong> They shift from "I'm" to "I am," casual to formal. They're putting up a wall.</div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Recovery</span>Soften your tone immediately. Ask an open question that hands them control: <em>"What's on your mind?"</em></div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">2</div>
+            <div>
+              <div class="mc-signal-cue"><strong>Time-stalling.</strong> "I'll have to think about it," "let me get back to you," "I'd want to talk to my wife first."</div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Recovery</span>Surface the real hesitation: <em>"I get that — is there a specific piece that's still unclear, or is it more that you want to mull it over?"</em></div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">3</div>
+            <div>
+              <div class="mc-signal-cue"><strong>Vague answers to specific questions.</strong> "How many medications?" → "A few." "How often?" → "Sometimes."</div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Recovery</span>Gentle precision: <em>"By a few — do you mean two or three, or more like five or six?"</em> Pin the number without sounding like an interrogation.</div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">4</div>
+            <div>
+              <div class="mc-signal-cue"><strong>Repeating questions you already answered.</strong> They weren't listening the first time.</div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Recovery</span>Don't repeat the same answer. Reframe it through their own words: <em>"You mentioned the copay was your biggest worry — here's specifically how this addresses that."</em></div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">5</div>
+            <div>
+              <div class="mc-signal-cue"><strong>"What's the catch?" or "What's the cost?" up front.</strong> They've been burned before. The defensiveness is about prior agents, not you.</div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Recovery</span>Address the suspicion directly: <em>"Honest answer — yes, there's a cost. Let me show you the math, then you decide if it's worth it."</em></div>
+            </div>
+          </div>
+
+          <div class="mc-signal-card">
+            <div class="mc-signal-num">6</div>
+            <div>
+              <div class="mc-signal-cue"><strong>Talking over you mid-sentence.</strong> They're cognitively saturated — you've put too much in front of them too fast.</div>
+              <div class="mc-signal-move"><span class="mc-signal-move-label">Recovery</span>Stop. Let them finish. Acknowledge what they said. Then ask: <em>"What's the part that's still on your mind?"</em> Slow the call back down.</div>
+            </div>
+          </div>
+
+          <div class="mc-callout mc-callout--warn">
+            <span class="mc-callout-label">The temptation to push through</span>
+            When resistance hits, most agents push harder — more benefits, faster delivery, louder enthusiasm. That's the move that closes the window for good. <strong>Resistance is a request to slow down and re-establish rapport.</strong> Honor it and you keep the call. Push through it and you lose it.
+          </div>
+
+          <!-- ============ UNIT 1.5 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">1.5 · The "calm expert" persona</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">Internalizing the NEPQ-required tone. Not what calm sounds like — what calm <em>thinks</em> like.</div></div>
+
+          <p class="mc-body">Agents who try to perform calm sound performative. Agents who actually <em>feel</em> calm sound calm. The way to feel calm on a call you've made a hundred times is to know what's happening before the prospect speaks — and to hold the right internal posture before you open your mouth.</p>
+
+          <p class="mc-body">This unit teaches the <strong>internal state</strong> that produces the right delivery. Get the state right and the tone follows naturally.</p>
+
+          <div class="mc-internal-state">
+            Before you speak, your internal posture is: <strong>I'm curious, not selling. I'm present, not performing.</strong> The prospect isn't an obstacle — they're someone who needs information I have. My job is to find out if this fits. If it doesn't, I'll DQ kindly. If it does, the math sells itself. Either way, I'm here to listen first.
+          </div>
+
+          <p class="mc-body">When you hold that posture before you pick up the phone, the opener writes itself. The pace settles automatically. The prospect feels the difference in the first ten seconds — and you didn't have to perform a thing.</p>
+
+          <h4 class="mc-h4">Three components of the calm-expert state</h4>
+          <ul class="mc-list">
+            <li><strong>Curiosity over conviction.</strong> Replace "I need to close this" with "I want to know if this fits." Curiosity-led tone is naturally calmer than conviction-led tone — and conviction-led tone is what prospects experience as pressure.</li>
+            <li><strong>Presence over performance.</strong> Most agents are mentally one step ahead of the conversation — already scripting the next move while the prospect is still talking. Presence means listening with full attention, even on the hundredth call where you already know the answer.</li>
+            <li><strong>Service over outcome.</strong> The prospect can tell whether you care about their fit or your sale. The way to actually care: assume each prospect might be a graceful DQ. Then when they're not, you've earned the close honestly.</li>
+          </ul>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">Where it comes from</span>
+            The "calm expert" isn't fake calm. It's the calm that comes from <strong>knowing the framework so well you don't have to perform expertise</strong>. The Crash Course gave you the framework. Now run calls until it feels automatic. That's when calm-expert becomes who you are, not what you're trying to sound like.
+          </div>
+
+          <!-- ============ UNIT 1.6 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">1.6 · Reading silence</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">When to wait. When to fill. When to ask a clarifying question. The discipline most agents never develop.</div></div>
+
+          <p class="mc-body">Silence on a senior call is almost never empty. It's processing. Most agents fear it and fill it — that's how you talk yourself out of sales you already had.</p>
+
+          <h4 class="mc-h4">Three silence types</h4>
+          <ul class="mc-list">
+            <li><strong>Processing silence</strong> (2-5 seconds after you describe something). They're absorbing. <em>Wait.</em> Filling it interrupts the very thinking you need them to do.</li>
+            <li><strong>Resistance silence</strong> (5+ seconds, often after a price reveal). They're deciding whether to push back. Soften your tone, then ask gently: <em>"What's coming up for you?"</em></li>
+            <li><strong>Disengagement silence</strong> (10+ seconds, no breath cues, energy gone). They've checked out. Re-engage gently — never with more selling: <em>"Mr. Hendricks, are you still with me?"</em></li>
+          </ul>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The default rule</span>
+            <strong>Count to four before you fill any pause.</strong> If they speak before four, they were processing — let them. If they don't speak by four, ask a clarifying question. Never re-pitch into silence. The agent who can comfortably sit in a three-second pause has more leverage than the agent who can't. Silence makes prospects work — and the prospect doing the work is the prospect leaning in.
+          </div>
+
+          <!-- ============ UNIT 1.7 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">1.7 · The mid-call self-check</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">A 4-question internal audit you run on yourself at minute 5 of every call. Stops you from missing what's actually happening.</div></div>
+
+          <p class="mc-body">At roughly the five-minute mark of every call, run a quick internal audit. Most agents drift without realizing it — these four questions catch the drift in about ten seconds and let you correct mid-call instead of after.</p>
+
+          <ol class="mc-list">
+            <li><strong>Am I still in discovery, or did I slip into pitching too early?</strong> If they haven't told me their Rx mix yet, I'm not ready to present. Go back.</li>
+            <li><strong>Is my pace still below theirs?</strong> If I've sped up, I'm getting eager. Pull it back down a notch.</li>
+            <li><strong>Have I asked an open question in the last 90 seconds?</strong> If not, I've slipped into monologue. Ask one now.</li>
+            <li><strong>What's their energy compared to three minutes ago?</strong> Up = leaning in, keep going. Down = losing them, slow down and re-engage. Flat = ambivalent — pivot to a deeper question.</li>
+          </ol>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The discipline</span>
+            The best agents don't run perfect calls. They run calls with <strong>continuous mid-course corrections</strong>. The five-minute self-check is the simplest version of that discipline — and the agents who build it into muscle memory outperform agents who only review their calls after the fact.
+          </div>
         </section>
 
         <!-- ============ PILLAR 2 ============ -->
@@ -2732,27 +3100,272 @@
 
           <p class="mc-body">The Crash Course covered the five most common objections. This pillar goes deeper: the nine other objections you'll hear, the rapport-repair moves, the emotional curveballs, and the discipline of handling mid-call disqualifications without burning the customer or your day.</p>
 
-          <h3 class="mc-h3" style="margin-top: 2rem;">The units</h3>
+          <!-- ============ UNIT 3.1 ============ -->
+          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.1 · Advanced objection library — 9 beyond the Crash Course</div><div class="mc-unit-time">8 min</div></div><div class="mc-unit-desc">The Crash Course covered the five most common objections. Here are nine more you'll hear — with the verbatim move for each.</div></div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.1 · Advanced objection library — 9 beyond the Crash Course</div><div class="mc-unit-time">8 min</div></div><div class="mc-unit-desc">"My financial advisor said no," "I had a bad experience with insurance," "call me back in 6 months," and 6 others — with NEPQ-style verbatim responses.</div></div>
+          <p class="mc-body">The five Crash Course objections are the ones you hear every day. The nine below are the ones you hear weekly — and the ones agents most often fumble because they're rarer. Read this section twice. Then come back to it after your first ten calls when one of these lands.</p>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.2 · Mid-call disqualification — how to break it gracefully</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">When a knockout fires after you've built rapport. How to acknowledge, pivot or DQ, and preserve the relationship.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 1</div>
+            <div class="mc-mini-cue">"My financial advisor said no."</div>
+            <div class="mc-mini-response">"That's smart to run it by your advisor. Did your advisor look at the home-care exposure piece specifically, or was it more of a general 'do you need more insurance' question?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Most advisors give a blanket no without actually reviewing the home-care gap. Surfacing what they reviewed tells you whether the no is informed or reflexive.</div>
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.3 · Rapport repair — three scripts for when you've broken something</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">Sounded pushy. Asked something wrong. Talked over them. Each has a recovery pattern.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 2</div>
+            <div class="mc-mini-cue">"I had a bad experience with insurance."</div>
+            <div class="mc-mini-response">"I hear that a lot. Most of the time it was either a claim that got denied, or an agent that sold them something they didn't actually need. Which one was it for you?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Acknowledges the wound + asks them to specify. The story becomes part of the rapport. Pitching over distrust hardens it.</div>
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.4 · The "I want my spouse" stall — full handling sequence</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">When it's real, when it's a stall, and the verbatim move for each.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 3</div>
+            <div class="mc-mini-cue">"Call me back in six months."</div>
+            <div class="mc-mini-response">"Honest answer — when people say 'call me back in six months,' it usually means either the timing is bad today, or it just isn't a fit. Which is it for you? Either way I want to give you straight info."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Surfaces the real objection without judgment. Often produces "it's not a fit" → graceful close, or "today is bad" → real reschedule.</div>
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.5 · The skeptical-of-insurance prospect</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">The trust-building macro pattern. Long arc, careful delivery, payoff at the close.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 4</div>
+            <div class="mc-mini-cue">"My kids handle my insurance."</div>
+            <div class="mc-mini-response">"Got it. Is there a specific son or daughter who handles it, or is it a family decision? I ask because it sometimes helps if I can give you a one-page summary you can share with them."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Honors the deferral, identifies the real decision-maker, offers a take-home that makes the prospect look good to their family.</div>
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.6 · The "is this a scam?" defensive open</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">How to recover from a hostile opener and earn the call.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 5</div>
+            <div class="mc-mini-cue">"My doctor didn't mention this to me."</div>
+            <div class="mc-mini-response">"Most doctors don't — they're focused on your medical care, not your insurance gaps. This isn't a medical product, it's a financial-protection product. Your doctor's silence on it is actually normal."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Reframes the doctor's silence as expected, not a red flag. Separates medical authority from insurance authority without challenging the doctor.</div>
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.7 · Time pressure — "I only have 5 minutes"</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">Two paths: respect the limit, or earn more time. When to use which.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 6</div>
+            <div class="mc-mini-cue">"I just had surgery / I'm in the middle of something heavy."</div>
+            <div class="mc-mini-response">"I really appreciate you taking the call given all that. Honestly, today's not the day for this — let me give you back to your recovery. When would be a calmer week for me to follow up?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Compassion-first. Pushing through a real-life crisis loses the relationship for good. Stepping back earns it. They remember the agent who didn't pressure them.</div>
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.8 · Emotional curveballs — crying, venting, recent loss</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">When the prospect's emotional state takes over. How to be present without losing the call.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 7</div>
+            <div class="mc-mini-cue">"I'll think about it and call you back."</div>
+            <div class="mc-mini-response">"Sure. Before you go — what's the part you're going to be thinking about? If it's the math, I can run a different example. If it's whether you trust it, that's a different conversation."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Surfaces the specific concern instead of letting "think about it" be the goodbye. The two paths (math vs. trust) cover most of what's actually happening.</div>
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">3.9 · The "send me information" brushoff</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">Why "send me info" always means no. The two moves that convert it into a continued conversation.</div></div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 8</div>
+            <div class="mc-mini-cue">"How did you get my number?"</div>
+            <div class="mc-mini-response">"Honest answer — you submitted a request through [lead source]. I'm a licensed agent calling on a recorded line. Want me to keep going, or did you not expect this call?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Transparency plus a permission gate. The honesty earns trust if they forgot they opted in; the gate gives them a clean exit if they truly didn't.</div>
+          </div>
 
-          <div class="mc-placeholder">Content for these units coming in Phase 3.</div>
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Objection 9</div>
+            <div class="mc-mini-cue">"That's not what my last agent said."</div>
+            <div class="mc-mini-response">"That's interesting — what specifically did they tell you? I want to make sure I'm not contradicting them on the same thing, because sometimes we're describing different parts of the policy."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Don't argue with the absent agent. Surface what was actually said. Often the prior agent was talking about MA, not ancillary — or a different carrier.</div>
+          </div>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The pattern across all nine</span>
+            Each response does the same three things: <strong>acknowledge without agreeing</strong>, <strong>ask one specific question</strong>, and <strong>hand the prospect back the floor</strong>. None of them argue. None of them try to "overcome." The objections that close are the ones the prospect talks themselves through with you guiding the questions.
+          </div>
+
+          <!-- ============ UNIT 3.2 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.2 · Mid-call disqualification — graceful break</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">When a knockout fires after rapport is built. How to acknowledge, DQ, and preserve the relationship for next time.</div></div>
+
+          <p class="mc-body">A knockout fires in stage 2 — the prospect mentions cancer treatment 14 months ago, or current home-care help, or a recent stroke. Your call just ended. What you do in the next 60 seconds determines whether they ever take your call again.</p>
+
+          <h4 class="mc-h4">The graceful break — verbatim</h4>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">The moment</div>
+            <div class="mc-mini-cue">[The prospect mentions the disqualifying condition in passing.]</div>
+            <div class="mc-mini-response">"I want to be straight with you. Based on what you just shared, this specific product isn't going to be a fit. Most carriers have a 24-month look-back on that, and you mentioned it was [X] months ago. So I don't want to waste your time pretending otherwise."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Honesty up front. No pretending. The phrase "I don't want to waste your time" is the trust deposit that earns the next call.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">The bridge</div>
+            <div class="mc-mini-cue">[Don't end on the no. Offer a path forward.]</div>
+            <div class="mc-mini-response">"Now, what I CAN do is make a note to follow up with you in [X] months when the look-back clears. That way you're at the top of my list when the timing works. Want me to do that?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Most DQs leave the prospect with nothing. The follow-up note costs you almost nothing and converts a hard no into a future yes.</div>
+          </div>
+
+          <div class="mc-callout mc-callout--warn">
+            <span class="mc-callout-label">The discipline</span>
+            <strong>DQ fast.</strong> Every minute past the knockout is a minute of false hope and a minute closer to the prospect feeling tricked. Burning the relationship looks like pretending now and failing later. Honesty in the moment is the cheapest investment you'll make all day.
+          </div>
+
+          <!-- ============ UNIT 3.3 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.3 · Rapport repair — three scripts</div><div class="mc-unit-time">5 min</div></div><div class="mc-unit-desc">Sounded pushy. Asked something wrong. Talked over them. Each has a specific recovery pattern.</div></div>
+
+          <p class="mc-body">Every call has moments where the agent breaks rapport. The agents who close the most are the ones who repair it on the spot. The three patterns below cover almost every case. The shared move: <strong>acknowledge → make space → invite them back in</strong>. Never explain why you did it.</p>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Repair A · Sounded pushy</div>
+            <div class="mc-mini-cue">[You hear yourself rushing the close, or feel the prospect pull back. Catch yourself.]</div>
+            <div class="mc-mini-response">"I just realized I was steamrolling you. Let me back up — what's actually on your mind?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Self-acknowledgment without grovelling. The agent who can name the mistake mid-call earns more trust than the agent who pretends it didn't happen.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Repair B · Asked something wrong</div>
+            <div class="mc-mini-cue">[You asked a question that landed weird — too personal, too clinical, off-tone.]</div>
+            <div class="mc-mini-response">"That was probably a weirder question than I intended. Let me ask it differently."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Short, light, no apology spiral. You're modeling that mistakes are normal — which makes the prospect more comfortable, not less.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Repair C · Talked over them</div>
+            <div class="mc-mini-cue">[You interrupted mid-sentence. The prospect's energy dropped.]</div>
+            <div class="mc-mini-response">"Sorry — you were saying something. Please finish."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Seven words. The cleanest repair you'll do all day. Then SHUT UP and actually let them finish — don't fill if they take three seconds to restart.</div>
+          </div>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The shared posture</span>
+            All three repairs share one thing: they're short. Long apologies make the moment about the agent. Short acknowledgments make it about the prospect. <strong>The fastest repair is always the best repair.</strong>
+          </div>
+
+          <!-- ============ UNIT 3.4 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.4 · The "I want to talk to my spouse" stall</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">When it's real, when it's a stall, and the verbatim move for each.</div></div>
+
+          <p class="mc-body">"Let me talk to my wife/husband" is two completely different things wearing the same words. One is a real consultation pattern. The other is a polite no. Reading which is which is half the unit.</p>
+
+          <h4 class="mc-h4">How to tell them apart</h4>
+          <ul class="mc-list">
+            <li><strong>Real consultation.</strong> Prospect has been actively engaged. Asked thoughtful questions. Took notes. Mentioned the spouse organically earlier ("my wife usually handles the bills"). Sounds energized when they bring it up.</li>
+            <li><strong>Stall.</strong> Prospect has been disengaged from minute one. Hasn't asked a question. "Spouse" appears suddenly as the call gets specific. Sounds relieved when they bring it up.</li>
+          </ul>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">When it's real</div>
+            <div class="mc-mini-cue">"My wife and I make these decisions together — I'd want to talk to her first."</div>
+            <div class="mc-mini-response">"That makes sense. Most couples handle this kind of decision together. What works for me — I'll send a one-page summary of what we covered, and I'll call back to walk through any questions she has. Does Tuesday or Wednesday work better?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Honors the process. Pre-books the next step instead of leaving it floating. The take-home summary makes the prospect look organized to their spouse — a small social win.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">When it's a stall</div>
+            <div class="mc-mini-cue">[Disengaged the whole call, hasn't asked a question — "spouse" appears as the exit door.]</div>
+            <div class="mc-mini-response">"I hear you. Honest question — is this something you and your spouse actually want to talk about, or is calling her back a way of telling me politely that it's not for you?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Permission to say no. Most stallers say "yeah, honestly it's not for me, sorry" and you save 40 minutes of follow-up chasing nothing. The minority who say "no, I really do want to talk to her" become real callbacks.</div>
+          </div>
+
+          <!-- ============ UNIT 3.5 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.5 · The skeptical-of-insurance prospect</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">A trust-building macro pattern. Long arc, careful delivery, payoff at the close.</div></div>
+
+          <p class="mc-body">Some prospects don't object to <em>this</em> product — they object to insurance as a category. They've been oversold before. They watched a relative get burned. They view every agent as a salesperson first and a human second. You can't win this objection in a single move. You win it across the whole call.</p>
+
+          <h4 class="mc-h4">Three components, in order</h4>
+          <ul class="mc-list">
+            <li><strong>Don't argue.</strong> Skepticism gets stronger when you push against it. Acknowledge that they have reason to be skeptical. "Most insurance products are oversold. Fair to be cautious."</li>
+            <li><strong>Earn micro-trust early — give them one piece of straight information that costs you something.</strong> Example: "Most ancillary policies are oversold to people who don't really need them. Let me show you when this one makes sense and when it doesn't." The willingness to talk them out of it builds more trust than any benefit list could.</li>
+            <li><strong>Let them ask.</strong> Skeptics respond to inquiry, not pitch. Once the trust starts forming, stop describing benefits and ask them: "What would make this worth even considering?" Their answer tells you exactly what to say next.</li>
+          </ul>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The non-obvious finding</span>
+            Skeptics close at higher rates than enthusiasts <em>once you earn their trust</em>. Enthusiasts are easy to start with and easy to lose at the end. Skeptics are hard to start with and hard to lose at the end. <strong>The mistake is trying to overcome skepticism with enthusiasm.</strong> Match calm with calm. Inquiry with inquiry.
+          </div>
+
+          <!-- ============ UNIT 3.6 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.6 · The "is this a scam?" defensive open</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">How to recover from a hostile opener and earn the call without sounding defensive.</div></div>
+
+          <p class="mc-body">Some calls open hot — the prospect picks up suspicious or even hostile. Often it's the third sales call they've gotten this morning. The next 30 seconds decide whether you get to have a conversation or get hung up on.</p>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">The exchange</div>
+            <div class="mc-mini-cue">"Is this a scam? How did you get my number?"</div>
+            <div class="mc-mini-response">"Totally fair question. Honest answer — no, this isn't a scam. I'm a licensed agent, this is a recorded line, and the company I represent is [carrier]. I'm calling about the request that came in [where the lead came from]. Want to take 60 seconds to verify me, or want me to keep going so we can see if this is even relevant for you?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Addresses the question directly. Offers a verification path. Ends with a permission gate. Three trust signals in one breath.</div>
+          </div>
+
+          <h4 class="mc-h4">What kills it</h4>
+          <ul class="mc-list">
+            <li><strong>Sounding offended.</strong> The prospect isn't insulting you personally — they're protecting themselves. React like it's a reasonable question.</li>
+            <li><strong>Over-explaining.</strong> Skeptics smell defensiveness. Short, factual, calm.</li>
+            <li><strong>Skipping the permission gate.</strong> The offer to stop the call is the move that earns the call. Without it, you're still in their "pushy" category.</li>
+          </ul>
+
+          <!-- ============ UNIT 3.7 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.7 · Time pressure — "I only have five minutes"</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">Two paths: respect the limit, or earn more time. The signal that tells you which.</div></div>
+
+          <p class="mc-body">"I only have five minutes" is sometimes literal and sometimes a test. The difference is the prospect's tone and context. Read it before you choose your move.</p>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Path A · Respect it</div>
+            <div class="mc-mini-cue">[They sound genuinely rushed. Background noise. Kids. Work in the background.]</div>
+            <div class="mc-mini-response">"Got it. Let me make these five minutes count. The fastest path is for me to ask you two questions, give you a yes/no on fit, and either book a longer call or wrap it up. Sound okay?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Compressed discovery, honest framing, clear exit. You earn the next call by respecting this one. Run the most compressed version of stage 2 you can — two questions, fit verdict, next step.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Path B · Earn more</div>
+            <div class="mc-mini-cue">[They sound calm and focused. The "five minutes" sounds like a boundary test, not a real constraint.]</div>
+            <div class="mc-mini-response">"Five is tight for what we'd cover. Honest question — is the five-minute limit firm, or if I made it valuable in the first three would you give me more?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Calls the test without being rude. Most prospects who set artificial limits will extend if you respect them enough to ask. The ones who don't were never going to convert anyway.</div>
+          </div>
+
+          <!-- ============ UNIT 3.8 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.8 · Emotional curveballs — crying, venting, recent loss</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">When the prospect's emotional state takes over the call. How to be present without losing the call.</div></div>
+
+          <p class="mc-body">Senior calls touch grief, fear, and loss more than any other sales category. A prospect might mention a sick spouse, a recent death, or a financial fear that breaks them open mid-call. The agent who treats these moments as obstacles loses the call. The agent who treats them as invitations to be human earns it.</p>
+
+          <h4 class="mc-h4">Three types, three moves</h4>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Type 1 · Crying or breaking down</div>
+            <div class="mc-mini-cue">[Often triggered by a sick spouse, recent loss, or sudden awareness of financial exposure.]</div>
+            <div class="mc-mini-response">"Take a moment. — We can absolutely come back to this another day if today isn't right."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Pause the call. Don't move forward until they invite it. The offer to reschedule signals you're not just here to close. Some will accept; some will say "no, please keep going."</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Type 2 · Venting</div>
+            <div class="mc-mini-cue">[About Medicare, the system, prior agents, life in general.]</div>
+            <div class="mc-mini-response">[Listen. Don't redirect. After they finish:] "I hear you. That sounds exhausting. Want me to keep going with this, or is today not the day?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Venting is rapport currency the prospect is giving you. Cutting it short costs more than the time it saves. The check-in question after they finish honors what they shared.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Type 3 · Recent loss</div>
+            <div class="mc-mini-cue">[Spouse, child, parent — often shared in stage 2 discovery as context.]</div>
+            <div class="mc-mini-response">"I'm so sorry. — Some people in your shoes find this helpful because it's one less thing to worry about. Others find it's too much on top of everything else. Which side are you on right now?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Direct acknowledgment, then two seconds of silence (the pause matters). The "which side are you on" question lets them choose without pressure — and they'll tell you honestly.</div>
+          </div>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The deeper rule</span>
+            Sales-mode and grief-mode are mutually exclusive. <strong>Switch fully or not at all.</strong> The agent who half-acknowledges the moment and then pivots back to pitch is worse than the agent who never acknowledged it. If you're going to be human, be all the way human.
+          </div>
+
+          <!-- ============ UNIT 3.9 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">3.9 · The "send me information" brushoff</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">Why "send me info" almost always means no. The two moves that convert it into a continued conversation.</div></div>
+
+          <p class="mc-body">"Just send me some information and I'll look it over" sounds polite. It almost always means "I don't want to say no on the phone." Email-only follow-ups land at near-zero conversion. Letting the prospect go quiet is letting the sale die.</p>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Move A · Surface the brushoff (when rapport feels low)</div>
+            <div class="mc-mini-cue">"Just send me some information and I'll look it over."</div>
+            <div class="mc-mini-response">"I can send something, but most people who get the email never open it — they just wanted off the call politely. No judgment if that's where you are. But if there's actual interest, the email isn't going to make a decision easier. What's the part that's not landing for you?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Calls the brushoff gently. Gives them permission to say no. If they're really not interested, the call ends honestly. If they are, the real objection comes out.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Move B · Convert to a live read (when rapport feels okay)</div>
+            <div class="mc-mini-cue">"Could you send me something I can look over?"</div>
+            <div class="mc-mini-response">"Here's what I'll do — I'll send a one-page summary right now while we're on the line. While you have it open, I can answer any specific question that comes up as you read it. Faster than reading it alone. Want to do it that way?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Honors the request but keeps the conversation alive. The prospect gets to read AND ask. Most accept because it's actually more efficient for them.</div>
+          </div>
+
+          <div class="mc-callout mc-callout--warn">
+            <span class="mc-callout-label">The graveyard</span>
+            Never let "send me info" be the close. The email goes unopened, the follow-up call goes to voicemail, the lead dies. Either surface what's really happening with Move A or convert to a live read with Move B. <strong>Email-only is where good leads go to die.</strong>
+          </div>
         </section>
 
         <!-- ============ PILLAR 4 ============ -->
@@ -2766,23 +3379,145 @@
 
           <p class="mc-body">A sale that cancels in month 3 hurts the agent (chargeback) and CPC (CTM risk). This pillar teaches the close itself — the micro-moves and the macro-timing — and what to say in the 60 seconds after approval that determines whether the customer becomes a long-term policyholder or a 90-day cancellation.</p>
 
-          <h3 class="mc-h3" style="margin-top: 2rem;">The units</h3>
+          <!-- ============ UNIT 4.1 ============ -->
+          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.1 · Recognizing "ready to close"</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">The macro state shift that tells you the prospect crossed from interested to ready. How to stop selling the moment you see it.</div></div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.1 · Recognizing "ready to close"</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">The signals — both verbal and behavioral — that the prospect is ready. How to stop selling and start closing.</div></div>
+          <p class="mc-body">Pillar 1 taught you the eight individual buying signals — phrases that mean "ready" in a single moment. This unit is about the bigger pattern: the energy shift that tells you the prospect has crossed a line, even before they say a specific buying signal.</p>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.2 · The micro-close — when to use it, when it's premature</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">"Do you feel this is the answer?" lands or breaks depending on timing. The four checks before you ask it.</div></div>
+          <h4 class="mc-h4">Three macro indicators</h4>
+          <ul class="mc-list">
+            <li><strong>The energy shift.</strong> Their questions go from "what does it cover" to "what's next." They've stopped evaluating. They're starting to plan.</li>
+            <li><strong>The "we" pronoun appearing.</strong> "If we had this..." or "we'd just need to..." They're already imagining themselves with the policy. The decision happened internally before they said anything.</li>
+            <li><strong>The shift from theoretical to practical.</strong> "When would coverage start?" "What does my wife need to do?" "Do I need to do this on a computer?" The questions get logistical.</li>
+          </ul>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.3 · The double commit — Q1 / Q2 in full</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">The non-obvious Q2 move that makes prospects sell themselves harder than you ever could.</div></div>
+          <div class="mc-callout">
+            <span class="mc-callout-label">The mistake</span>
+            Continuing to sell past the shift. Agents who don't recognize the energy change keep listing benefits, and the prospect's tone flattens — they were ready, and you kept presenting <em>past</em> ready. <strong>Flat tone after engaged tone means you missed the close.</strong> Course-correct by stopping mid-sentence and asking: "Where's your head at right now?"
+          </div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.4 · The application handoff — staying present without being intrusive</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">What to say at the Advocate transfer. What you do while the Advocate talks. When to chime in. When to stay quiet.</div></div>
+          <!-- ============ UNIT 4.2 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">4.2 · The micro-close — when to use, when it's premature</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">"Do you feel this is the answer for you?" lands when timing is right. Breaks rapport when premature. The four checks before you ask it.</div></div>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.5 · The post-sale 60 seconds</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">What to say after approval. Policy delivery, first premium, claims contact, expectation-setting for UNL's welcome call.</div></div>
+          <p class="mc-body">The micro-close is a low-pressure check-in. Asked at the right moment, it advances the call. Asked too early, it makes you sound transactional. Run the four checks below first. If any is missing, go shore up the missing piece before you ask.</p>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.6 · Setting up persistency from minute one</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">The 30/60/90-day mental model the agent communicates without naming. Why this matters for chargeback exposure.</div></div>
+          <h4 class="mc-h4">The four pre-checks</h4>
+          <ol class="mc-list">
+            <li><strong>They've heard the math.</strong> Gross premium and net cost both. If they've only heard one number, they're not ready.</li>
+            <li><strong>Knockouts are clean.</strong> You've worked through the health questions and nothing fired. If anything is unresolved, the micro-close is premature.</li>
+            <li><strong>They've asked at least one specific question.</strong> Their question signals engagement. Without it, you don't have the data to know if you're close.</li>
+            <li><strong>Their tone is leaning in.</strong> Energy up, not flat. Curious, not polite-dismissive.</li>
+          </ol>
 
-          <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">4.7 · The referral ask — when, how, what to say</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">Most agents never ask. The ones who do, ask wrong. The right moment and the right phrasing.</div></div>
+          <div class="mc-callout">
+            <span class="mc-callout-label">When all four are green</span>
+            Just ask. Direct, calm, no preamble: "Do you feel this is the answer for you?" Then stop talking. The agent who fears the silence after that question kills the close more often than the agent who asks too early.
+          </div>
 
-          <div class="mc-placeholder">Content for these units coming in Phase 3.</div>
+          <!-- ============ UNIT 4.3 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">4.3 · The double commit — Q1 / Q2 in full</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">The Crash Course sketched this. Here's the full delivery — and the non-obvious Q2 move that makes prospects sell themselves harder than you could.</div></div>
+
+          <p class="mc-body">Once the micro-close lands with a yes, most agents go straight to application. The masters add one more move first: the second commit question. It feels small. It moves persistency more than any other single move in the call.</p>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Q1 · The commit</div>
+            <div class="mc-mini-cue">[Run the four pre-checks. Then:]</div>
+            <div class="mc-mini-response">"Do you feel this is the answer for you?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>It's the lightest possible commitment ask. Yes/no, no pressure, no implication that they're locked in.</div>
+          </div>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">Q2 · The non-obvious move</div>
+            <div class="mc-mini-cue">[They say yes. Don't move to application yet. Instead:]</div>
+            <div class="mc-mini-response">"Tell me — why do you feel it is?"</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>They sell themselves. Their answer becomes the reason they remember in month 4 when they're tempted to cancel. <strong>The agent's reasons fade; the prospect's own reasons stick.</strong></div>
+          </div>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">What kills Q2</span>
+            Adding your own reasons after they answer. They said: "Because if my wife ever needs help at home, I don't want to scramble." Your move is "That's exactly right" — <strong>not</strong> "Right, and also it covers X, Y, Z." Let their reason be the reason. Anything you add dilutes the commitment they just made.
+          </div>
+
+          <!-- ============ UNIT 4.4 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">4.4 · The application handoff</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">The Advocate transfer is a high-risk moment. Done well, it preserves the sale. Done poorly, it loses it.</div></div>
+
+          <p class="mc-body">You're handing the warm prospect to a stranger. The wrong handoff feels like being dropped. The right one feels like a continuation. Three rules govern what you do.</p>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">The transfer line</div>
+            <div class="mc-mini-cue">[After Q2, before you bring the Advocate on:]</div>
+            <div class="mc-mini-response">"I'm going to bring on our licensed Advocate, [name]. They'll walk through the application with you and answer any compliance questions. I'll stay on the line in case anything comes up. This usually takes 8 to 12 minutes."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>Names the Advocate. Sets time expectation. Promises you stay. The prospect doesn't feel transferred to a stranger and abandoned — they feel handed off carefully.</div>
+          </div>
+
+          <h4 class="mc-h4">Three rules while the Advocate talks</h4>
+          <ul class="mc-list">
+            <li><strong>Stay quiet most of the time.</strong> The Advocate has a script. Talking over them creates compliance issues and slows the call down.</li>
+            <li><strong>Chime in only to clarify, never to add.</strong> If the prospect asks something the Advocate phrases technically, you can translate. Don't volunteer new information.</li>
+            <li><strong>Be audibly present at start and end.</strong> Say one short thing at the beginning ("I'm right here with you"). Say one short thing at approval ("Congratulations — this is set"). In between, you're a quiet presence, not a participant.</li>
+          </ul>
+
+          <!-- ============ UNIT 4.5 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">4.5 · The post-sale 60 seconds</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">Most agents end the call when the application is signed. The 60 seconds after approval is where you protect the sale.</div></div>
+
+          <p class="mc-body">Approval lands. Most agents say "great, we're all set" and end the call. The agents with the strongest persistency use the next 60 seconds to set expectations that prevent surprise — and surprise is the biggest driver of early cancellation.</p>
+
+          <h4 class="mc-h4">Four things to cover, in order</h4>
+          <ol class="mc-list">
+            <li><strong>Policy delivery timing.</strong> "You'll get the policy in the mail or by email in [timeframe]. Look for [carrier name]."</li>
+            <li><strong>First premium expectations.</strong> "Your first payment will come out on [date]. After that, it's [monthly/annual] on the same date."</li>
+            <li><strong>Claims contact info.</strong> "If you ever need to file a claim, the number is on the policy. You can also call me back and I'll walk you through it."</li>
+            <li><strong>The welcome call from the carrier.</strong> "Within the next [X] days, you'll get a quick call from [carrier] just confirming you're satisfied. It's a normal verification call. Just say yes — they're checking to make sure I represented things correctly."</li>
+          </ol>
+
+          <div class="mc-callout mc-callout--warn">
+            <span class="mc-callout-label">Why the welcome-call mention matters most</span>
+            A surprised welcome call where the prospect doesn't remember who you were or what they bought is the leading indicator of a 30-day cancellation. <strong>Mention the welcome call so it feels expected, not random.</strong> Two sentences here save dozens of chargebacks per year.
+          </div>
+
+          <!-- ============ UNIT 4.6 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">4.6 · Setting up persistency from minute one</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">Persistency isn't a post-sale event. The agent who sets it up during the call has far fewer chargebacks than the one who closes hard and hopes.</div></div>
+
+          <p class="mc-body">A policy that cancels in month 3 hurts everyone. Chargebacks for the agent. CTM exposure for CPC. The work of preventing this happens during the call, not after. Three small moves baked into normal call language move persistency the most.</p>
+
+          <h4 class="mc-h4">Three persistency-building moves during the call</h4>
+          <ul class="mc-list">
+            <li><strong>Frame the policy as "active starting [date]," not just "your new policy."</strong> The specific date creates a mental anchor. The prospect remembers when coverage began — and that's the day they'll measure against if they ever question the value.</li>
+            <li><strong>Acknowledge the free-look period without highlighting it.</strong> "You'll have [X] days to review the policy when it arrives." Said once, in passing. Don't sell against it; just establish it as normal.</li>
+            <li><strong>Mention the claims process casually so it feels accessible.</strong> "When you ever need to use this, you'll call [number]." Not "if you ever need to" — <em>when</em>. Subtle, but it pre-frames using the policy as inevitable, not hypothetical.</li>
+          </ul>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">The deeper principle</span>
+            People cancel policies they don't feel ownership of. Each of these three moves transfers ownership to the prospect — the date is theirs, the review period is theirs, the future claim is theirs. <strong>You're not selling them a policy; you're handing them something they already own.</strong>
+          </div>
+
+          <!-- ============ UNIT 4.7 ============ -->
+          <div class="mc-unit" style="margin-top: 2.5rem;"><div class="mc-unit-header"><div class="mc-unit-title">4.7 · The referral ask</div><div class="mc-unit-time">3 min</div></div><div class="mc-unit-desc">Most agents never ask. The ones who do, ask wrong. The right moment and the right phrasing.</div></div>
+
+          <p class="mc-body">Referrals from satisfied prospects are the cheapest leads you'll ever get. Timing and phrasing decide whether you get one or kill the goodwill of the sale. Both are small. Both matter more than agents realize.</p>
+
+          <h4 class="mc-h4">The right moment</h4>
+          <p class="mc-body">After the Q2 commit, before the Advocate handoff. They're in "yes" mode. The decision is fresh. They feel good about it. <strong>Not</strong> during the application (interrupts compliance flow). <strong>Not</strong> after the welcome call (too late, momentum gone). <strong>Not</strong> as a follow-up text the next day (cold).</p>
+
+          <div class="mc-mini-script">
+            <div class="mc-mini-num">The ask</div>
+            <div class="mc-mini-cue">[Right after Q2. Tone is light, brief, casual.]</div>
+            <div class="mc-mini-response">"While I have you — do you have a friend or family member who might want to know about this? No pressure, just a name."</div>
+            <div class="mc-mini-why"><span class="mc-mini-why-label">Why this works</span>"No pressure, just a name" lowers the ask. Most agents over-ask, framing it as a favor. This frames it as a small piece of information you might find useful. Easier to give.</div>
+          </div>
+
+          <h4 class="mc-h4">If they give a name</h4>
+          <ul class="mc-list">
+            <li><strong>Don't ask for the number on the spot.</strong> Too transactional. Instead: "Got it. I'll reach out and just mention you thought of them — that okay?"</li>
+            <li><strong>Confirm what to say.</strong> "When I call, is it okay to mention your name, or would you prefer I not say where the referral came from?"</li>
+            <li><strong>Thank, briefly.</strong> One sentence. Not a long thank-you that makes them feel they did something burdensome.</li>
+          </ul>
+
+          <div class="mc-callout">
+            <span class="mc-callout-label">If they say no</span>
+            "No problem at all" — and move straight to the Advocate handoff. Don't push, don't soften, don't reframe. The ask cost you nothing; the gracious accept of "no" costs you nothing either. The prospect who said no today might send one in three months once they've used the policy.
+          </div>
         </section>
 
         <!-- ============ CAPSTONE ============ -->
@@ -2833,6 +3568,22 @@
 
           <div class="mc-placeholder">Resource panel content coming in Phase 5.</div>
         </section>
+
+        <!-- Terminal CTA — journey complete -->
+        <div class="unl-next-step">
+          <div>
+            <div class="unl-next-step-eyebrow">★ Step 4 of 4 · Journey complete</div>
+            <h3>Your toolkit is ready. Time to take your first call.</h3>
+            <p>You've worked through the foundation, the math, and the practice patterns. Keep the Crash Course open for concept refresh, the Rx Calculator open on every pitch, and come back here for drill mode anytime you need to sharpen.</p>
+          </div>
+          <div class="unl-next-step-actions">
+            <a href="https://duynomite.github.io/unl-crash-course/" target="_blank" rel="noopener" class="unl-next-step-btn">
+              Open the Crash Course
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://duynomite.github.io/unl-rx-calculator/" target="_blank" rel="noopener" class="unl-next-step-secondary">Or the Rx Calculator →</a>
+          </div>
+        </div>
 
       </main>
 
