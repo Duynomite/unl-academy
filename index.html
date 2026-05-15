@@ -497,9 +497,41 @@
     /* RESOURCES */
     .mc-resources-grid { display: grid; grid-template-columns: 1fr; gap: 0.85rem; margin: 1.5rem 0; }
     @media (min-width: 640px) { .mc-resources-grid { grid-template-columns: 1fr 1fr; } }
-    .mc-resource { padding: 1rem 1.25rem 1.1rem; background: white; border: 1px solid #D8E6E3; border-radius: 0.55rem; }
-    .mc-resource-title { font-family: "Urbanist", sans-serif; font-weight: 600; font-size: 0.95rem; color: #2D5A7A; margin-bottom: 0.35rem; }
+    .mc-resource { padding: 1rem 1.25rem 1.1rem; background: white; border: 1px solid #D8E6E3; border-radius: 0.55rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.15s, transform 0.15s; }
+    .mc-resource:hover { border-color: #2D5A7A; transform: translateY(-1px); }
+    .mc-resource-title { font-family: "Urbanist", sans-serif; font-weight: 600; font-size: 0.95rem; color: #2D5A7A; margin-bottom: 0.35rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+    .mc-resource-title::after { content: '↓'; font-size: 0.8rem; color: #4B7797; opacity: 0.65; }
     .mc-resource-desc { font-family: "Jost", sans-serif; font-size: 0.85rem; color: #4B7797; line-height: 1.55; }
+
+    /* Resources detail sections */
+    .mc-res-detail { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #D8E6E3; scroll-margin-top: 5rem; }
+    .mc-res-detail-eyebrow { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.66rem; letter-spacing: 0.14em; color: #4B7797; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .mc-res-detail-title { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.35rem; color: #2D5A7A; margin-bottom: 0.85rem; line-height: 1.2; }
+
+    /* State availability table */
+    .mc-res-table { display: grid; grid-template-columns: auto 1fr; gap: 0.6rem 1.25rem; max-width: 42rem; margin: 0.85rem 0 1.25rem; padding: 0.95rem 1.15rem 1rem; background: white; border: 1px solid #D8E6E3; border-radius: 0.55rem; font-family: "Jost", sans-serif; font-size: 0.93rem; line-height: 1.55; color: #34252F; }
+    .mc-res-table-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; color: #2D5A7A; text-transform: uppercase; padding-top: 0.1rem; white-space: nowrap; }
+    .mc-res-table-val { line-height: 1.6; }
+    .mc-res-table-val code { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: #C97A1F; background: rgba(201,122,31,0.06); padding: 0.05rem 0.4rem 0.1rem; border-radius: 3px; margin: 0 0.05rem; }
+
+    /* Iframe wrapper */
+    .mc-res-iframe-wrap { background: white; border: 1px solid #D8E6E3; border-radius: 0.6rem; padding: 0.5rem; max-width: 50rem; margin: 1rem 0; }
+    .mc-res-iframe { display: block; width: 100%; height: 720px; border: 0; border-radius: 0.45rem; background: #FBFAF7; }
+    .mc-res-iframe-fallback { font-family: "Jost", sans-serif; font-size: 0.85rem; color: #4B7797; padding: 0.7rem 0.85rem 0; }
+    .mc-res-iframe-fallback a { color: #2D5A7A; font-weight: 600; }
+    @media (max-width: 640px) { .mc-res-iframe { height: 560px; } }
+
+    /* Frame library item */
+    .mc-res-frame { background: white; border: 1px solid #D8E6E3; border-left: 3px solid #4B7797; border-radius: 0 0.5rem 0.5rem 0; padding: 0.85rem 1.1rem 0.95rem; margin-bottom: 0.65rem; max-width: 46rem; }
+    .mc-res-frame-tag { display: inline-block; font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.6rem; letter-spacing: 0.14em; color: #2D5A7A; background: rgba(45,90,122,0.07); padding: 0.18rem 0.55rem 0.22rem; border-radius: 3px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .mc-res-frame-line { font-family: "Jost", sans-serif; font-size: 0.95rem; line-height: 1.6; color: #34252F; font-style: italic; }
+
+    /* Never-says cards */
+    .mc-res-never { background: white; border: 1px solid #D8E6E3; border-left: 3px solid #C97A1F; border-radius: 0 0.5rem 0.5rem 0; padding: 0.95rem 1.15rem 1.05rem; margin-bottom: 0.7rem; max-width: 46rem; }
+    .mc-res-never-bad { font-family: "Jost", sans-serif; font-size: 0.92rem; color: #8B5413; margin-bottom: 0.4rem; }
+    .mc-res-never-bad::before { content: '✕ '; font-weight: 700; }
+    .mc-res-never-good { font-family: "Jost", sans-serif; font-size: 0.92rem; line-height: 1.6; color: #34252F; padding-left: 0.85rem; border-left: 2px solid #3DCEB2; }
+    .mc-res-never-good::before { content: '✓ '; color: #3DCEB2; font-weight: 700; }
 
     /* CTA */
     .mc-cta { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.85rem 1.5rem; background: #2D5A7A; color: white; font-family: "Urbanist", sans-serif; font-weight: 600; font-size: 0.9rem; border-radius: 999px; text-decoration: none; transition: all 0.15s; letter-spacing: 0.01em; }
@@ -539,11 +571,121 @@
       .mc-journey-inner { padding: 0.45rem 1rem; font-size: 0.6rem; }
     }
 
+    /* ============================================================
+       CAPSTONE — Simulation + scoring + certificate
+       ============================================================ */
+
+    .mc-cap-start-card { background: white; border: 1px solid #D8E6E3; border-radius: 0.75rem; padding: 1.5rem 1.75rem 1.65rem; margin: 1.5rem 0 0; max-width: 44rem; }
+    .mc-cap-start-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.66rem; letter-spacing: 0.16em; color: #2D5A7A; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .mc-cap-start-title { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.25rem; color: #2D5A7A; margin-bottom: 0.6rem; }
+    .mc-cap-start-body { font-family: "Jost", sans-serif; font-size: 0.95rem; line-height: 1.7; color: #34252F; margin-bottom: 1.25rem; max-width: 36rem; }
+    .mc-cap-start-btn { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.5rem; background: linear-gradient(135deg, #2D5A7A 0%, #10202C 100%); color: white; font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 0.55rem; cursor: pointer; box-shadow: 0 3px 12px rgba(45,90,122,0.25); transition: transform 0.15s, box-shadow 0.15s; }
+    .mc-cap-start-btn:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(45,90,122,0.32); }
+
+    .mc-cap-sim { display: none; margin-top: 1.5rem; max-width: 52rem; }
+    .mc-cap-sim.is-active { display: block; }
+
+    .mc-cap-progress { background: white; border: 1px solid #D8E6E3; border-radius: 0.55rem; padding: 0.85rem 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
+    .mc-cap-progress-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; color: #2D5A7A; text-transform: uppercase; flex-shrink: 0; }
+    .mc-cap-progress-bar { flex: 1; height: 6px; background: rgba(45,90,122,0.1); border-radius: 999px; overflow: hidden; }
+    .mc-cap-progress-fill { height: 100%; background: linear-gradient(to right, #3DCEB2, #2D5A7A); width: 0%; transition: width 0.4s ease; }
+    .mc-cap-progress-count { font-family: "JetBrains Mono", monospace; font-size: 0.8rem; color: #4B7797; font-weight: 600; flex-shrink: 0; }
+
+    .mc-cap-card { background: white; border: 1px solid #D8E6E3; border-radius: 0.75rem; padding: 1.5rem 1.75rem 1.75rem; margin-bottom: 1.25rem; box-shadow: 0 2px 8px rgba(45,90,122,0.06); }
+    .mc-cap-pillar-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.16em; color: white; background: #2D5A7A; padding: 0.32rem 0.7rem 0.35rem; border-radius: 4px; text-transform: uppercase; margin-bottom: 0.85rem; }
+    .mc-cap-stage { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.15rem; color: #2D5A7A; margin-bottom: 0.85rem; }
+    .mc-cap-setup { font-family: "Jost", sans-serif; font-style: italic; font-size: 0.96rem; line-height: 1.7; color: #34252F; padding: 0.85rem 1.1rem; background: rgba(45,90,122,0.04); border-left: 3px solid #4B7797; border-radius: 0 0.45rem 0.45rem 0; margin-bottom: 1.1rem; }
+    .mc-cap-prompt { font-family: "Urbanist", sans-serif; font-weight: 600; font-size: 1.05rem; color: #2D5A7A; margin-bottom: 1rem; }
+
+    .mc-cap-choices { display: flex; flex-direction: column; gap: 0.65rem; }
+    .mc-cap-choice { display: block; width: 100%; text-align: left; padding: 0.95rem 1.15rem; background: white; border: 2px solid #D8E6E3; border-radius: 0.55rem; font-family: "Jost", sans-serif; font-size: 0.94rem; line-height: 1.55; color: #34252F; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+    .mc-cap-choice:hover:not(:disabled) { border-color: #2D5A7A; background: rgba(45,90,122,0.03); }
+    .mc-cap-choice:disabled { cursor: default; }
+    .mc-cap-choice.is-selected.is-correct { border-color: #3DCEB2; background: rgba(61,206,178,0.08); }
+    .mc-cap-choice.is-selected.is-partial { border-color: #C97A1F; background: rgba(201,122,31,0.08); }
+    .mc-cap-choice.is-selected.is-incorrect { border-color: #C97A1F; background: rgba(201,122,31,0.05); opacity: 0.85; }
+    .mc-cap-choice.is-correct-answer { border-color: #3DCEB2; background: rgba(61,206,178,0.04); }
+    .mc-cap-choice-letter { font-family: "JetBrains Mono", monospace; font-weight: 700; color: #2D5A7A; margin-right: 0.55rem; }
+
+    .mc-cap-feedback { margin-top: 1.1rem; padding: 1rem 1.2rem 1.1rem; border-radius: 0.55rem; font-family: "Jost", sans-serif; font-size: 0.92rem; line-height: 1.65; color: #34252F; display: none; }
+    .mc-cap-feedback.is-visible { display: block; }
+    .mc-cap-feedback--correct { background: rgba(61,206,178,0.1); border-left: 3px solid #3DCEB2; }
+    .mc-cap-feedback--partial { background: rgba(201,122,31,0.08); border-left: 3px solid #C97A1F; }
+    .mc-cap-feedback--incorrect { background: rgba(201,122,31,0.06); border-left: 3px solid #C97A1F; }
+    .mc-cap-feedback-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.65rem; letter-spacing: 0.14em; color: #2D5A7A; text-transform: uppercase; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .mc-cap-feedback-points { font-family: "JetBrains Mono", monospace; font-weight: 700; color: #2D5A7A; font-size: 0.82rem; background: rgba(45,90,122,0.08); padding: 0.15rem 0.5rem 0.18rem; border-radius: 3px; letter-spacing: 0; }
+    .mc-cap-feedback-cite { font-family: "Urbanist", sans-serif; font-size: 0.7rem; letter-spacing: 0.05em; color: #4B7797; margin-top: 0.6rem; font-style: italic; }
+
+    .mc-cap-next-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.1rem; padding: 0.72rem 1.4rem; background: #2D5A7A; color: white; font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 0.5rem; cursor: pointer; transition: background 0.15s; }
+    .mc-cap-next-btn:hover { background: #10202C; }
+
+    /* Summary */
+    .mc-cap-summary { background: white; border: 1px solid #D8E6E3; border-radius: 0.75rem; padding: 1.75rem 1.85rem 2rem; margin-bottom: 1.25rem; }
+    .mc-cap-summary-eyebrow { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.65rem; }
+    .mc-cap-summary-eyebrow.is-pass { color: #3DCEB2; }
+    .mc-cap-summary-eyebrow.is-fail { color: #C97A1F; }
+    .mc-cap-summary-title { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.5rem; color: #2D5A7A; margin-bottom: 0.85rem; line-height: 1.25; }
+    .mc-cap-summary-body { font-family: "Jost", sans-serif; font-size: 0.96rem; line-height: 1.7; color: #34252F; margin-bottom: 1.35rem; max-width: 40rem; }
+
+    .mc-cap-total { padding: 1.15rem 1.35rem 1.25rem; background: linear-gradient(135deg, rgba(45,90,122,0.06) 0%, rgba(61,206,178,0.09) 100%); border-radius: 0.6rem; margin: 1.25rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .mc-cap-total-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.1em; color: #2D5A7A; text-transform: uppercase; }
+    .mc-cap-total-val { font-family: "JetBrains Mono", monospace; font-weight: 700; color: #2D5A7A; line-height: 1; }
+    .mc-cap-total-val span { font-size: 2.1rem; }
+    .mc-cap-total-val small { font-size: 0.92rem; color: #4B7797; margin-left: 0.4rem; font-weight: 500; }
+
+    .mc-cap-scoreboard { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin: 1.35rem 0; }
+    @media (min-width: 640px) { .mc-cap-scoreboard { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; } }
+    @media (min-width: 1000px) { .mc-cap-scoreboard { grid-template-columns: repeat(4, 1fr); } }
+    .mc-cap-score { background: rgba(45,90,122,0.04); border: 1px solid #D8E6E3; border-radius: 0.55rem; padding: 0.95rem 1.05rem 1.05rem; }
+    .mc-cap-score-pillar { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.14em; color: #4B7797; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .mc-cap-score-name { font-family: "Urbanist", sans-serif; font-weight: 600; font-size: 0.92rem; color: #2D5A7A; margin-bottom: 0.65rem; }
+    .mc-cap-score-val { display: flex; align-items: baseline; gap: 0.3rem; }
+    .mc-cap-score-num { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 1.55rem; color: #2D5A7A; }
+    .mc-cap-score-den { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: #4B7797; }
+    .mc-cap-score--low { border-color: rgba(201,122,31,0.45); }
+    .mc-cap-score--low .mc-cap-score-num { color: #C97A1F; }
+
+    /* Certificate */
+    .mc-cap-cert-wrap { margin-top: 1.5rem; }
+    .mc-cap-name-label { display: block; font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.66rem; letter-spacing: 0.14em; color: #2D5A7A; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .mc-cap-name-input { display: block; width: 100%; max-width: 28rem; padding: 0.7rem 0.95rem; font-family: "Urbanist", sans-serif; font-size: 1rem; color: #34252F; background: white; border: 2px solid #D8E6E3; border-radius: 0.5rem; }
+    .mc-cap-name-input:focus { outline: none; border-color: #2D5A7A; }
+
+    .mc-cert { background: white; border: 2px solid #D8E6E3; border-radius: 0.75rem; padding: 2.5rem 2.5rem 2.75rem; margin: 1.5rem 0; max-width: 44rem; box-shadow: 0 4px 16px rgba(45,90,122,0.08); position: relative; }
+    .mc-cert-mark { position: absolute; top: 1.5rem; right: 2rem; width: 3.4rem; height: 3.4rem; border-radius: 50%; background: linear-gradient(135deg, #2D5A7A 0%, #10202C 100%); display: flex; align-items: center; justify-content: center; color: #3DCEB2; font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.45rem; box-shadow: 0 3px 10px rgba(45,90,122,0.25); }
+    .mc-cert-eyebrow { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.2em; color: #3DCEB2; text-transform: uppercase; margin-bottom: 0.85rem; }
+    .mc-cert-title { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.65rem; color: #2D5A7A; margin-bottom: 0.45rem; line-height: 1.2; }
+    .mc-cert-sub { font-family: "Jost", sans-serif; font-size: 0.92rem; color: #4B7797; font-style: italic; margin-bottom: 2rem; }
+    .mc-cert-presented { font-family: "Urbanist", sans-serif; font-size: 0.7rem; letter-spacing: 0.14em; color: #4B7797; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .mc-cert-name { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 1.95rem; color: #2D5A7A; line-height: 1.15; margin-bottom: 1.5rem; border-bottom: 2px solid #3DCEB2; padding-bottom: 0.55rem; max-width: 24rem; }
+    .mc-cert-body { font-family: "Jost", sans-serif; font-size: 0.94rem; line-height: 1.7; color: #34252F; margin-bottom: 1.75rem; max-width: 34rem; }
+    .mc-cert-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(45,90,122,0.15); }
+    .mc-cert-meta-label { font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.6rem; letter-spacing: 0.14em; color: #4B7797; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .mc-cert-meta-val { font-family: "JetBrains Mono", monospace; font-weight: 600; font-size: 0.9rem; color: #2D5A7A; word-break: break-all; }
+
+    .mc-cap-actions { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.25rem; }
+    .mc-cap-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.3rem; font-family: "Urbanist", sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 0.5rem; cursor: pointer; text-decoration: none; transition: all 0.15s; }
+    .mc-cap-btn-primary { background: #2D5A7A; color: white; }
+    .mc-cap-btn-primary:hover { background: #10202C; }
+    .mc-cap-btn-secondary { background: white; color: #2D5A7A; border: 1.5px solid #D8E6E3; }
+    .mc-cap-btn-secondary:hover { border-color: #2D5A7A; }
+
+    @media (max-width: 640px) {
+      .mc-cap-card, .mc-cap-summary { padding: 1.2rem 1.25rem 1.35rem; }
+      .mc-cert { padding: 1.75rem 1.5rem 2rem; }
+      .mc-cert-mark { top: 1.1rem; right: 1.1rem; width: 2.6rem; height: 2.6rem; font-size: 1.15rem; }
+      .mc-cert-name { font-size: 1.5rem; }
+      .mc-cert-title { font-size: 1.35rem; }
+      .mc-cert-meta-grid { grid-template-columns: 1fr; gap: 0.85rem; }
+    }
+
     @media print {
-      .mc-sidebar, .mc-mobile-btn, .mc-mobile-drawer, .mc-journey-bar, .mc-cta { display: none !important; }
-      .mc-header { position: static; box-shadow: none; }
-      .mc-grid { grid-template-columns: 1fr; }
+      /* Hide everything except the cert when printing */
+      body * { visibility: hidden; }
+      .mc-cert, .mc-cert * { visibility: visible; }
+      .mc-cert { position: absolute; top: 0; left: 0; right: 0; margin: 0 auto; box-shadow: none; border: 1.5px solid #2D5A7A; max-width: 100%; page-break-inside: avoid; }
       body { background: white; }
+      @page { margin: 0.5in; }
     }
 
     /* ============ UNL NEXT-STEP CTA (shared across all 4 tools) ============ */
@@ -3541,9 +3683,27 @@
             </div>
           </div>
 
-          <p class="mc-body" style="font-size: 0.92rem; color: #4B7797; font-style: italic;">Capstone unlocks once all four pillars are 100% complete. The certificate is shareable — printed PDF with your name, completion date, score breakdown, and a unique verification ID that pod leaders can confirm.</p>
+          <p class="mc-body" style="font-size: 0.92rem; color: #4B7797; font-style: italic;">Capstone unlocks once all four pillars are 100% complete. The certificate is shareable — printed PDF with your name, completion date, and a unique verification ID that pod leaders can confirm.</p>
 
-          <div class="mc-placeholder">Capstone simulation logic + certificate generation coming in Phase 4.</div>
+          <div class="mc-cap-start-card" id="cap-start">
+            <div class="mc-cap-start-label">Ready when you are</div>
+            <div class="mc-cap-start-title">Meet Margaret</div>
+            <p class="mc-cap-start-body">A 70-year-old widow in Tucson, Arizona. Inbound general benefit lead. Four generic prescriptions plus Eliquis. Health is mostly clean. She's still adjusting after losing her husband Tom eight months ago — he handled all the household finances. <strong>One curveball will fire mid-call.</strong> Seven decision points. Take your time. There's no clock running.</p>
+            <button type="button" class="mc-cap-start-btn" id="cap-start-btn">
+              Start the simulation
+              <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+
+          <div class="mc-cap-sim" id="cap-sim">
+            <div class="mc-cap-progress">
+              <span class="mc-cap-progress-label">Progress</span>
+              <div class="mc-cap-progress-bar"><div class="mc-cap-progress-fill" id="cap-progress-fill"></div></div>
+              <span class="mc-cap-progress-count" id="cap-progress-count">0 / 7</span>
+            </div>
+            <div id="cap-question-container"></div>
+            <div id="cap-summary-container"></div>
+          </div>
         </section>
 
         <!-- ============ RESOURCES ============ -->
@@ -3558,15 +3718,195 @@
           <p class="mc-body">The Master Class doesn't re-teach the reference material — that's the Crash Course's job. But this panel surfaces the data you'll need to consult on demand: state availability, full knockouts, the pitch frame library, and an embedded copy of the Rx Calculator so you can run math without leaving the page.</p>
 
           <div class="mc-resources-grid">
-            <div class="mc-resource"><div class="mc-resource-title">State availability matrix</div><div class="mc-resource-desc">HI Shield + HHC by state. The 9 states with HHC limits. KY Rx exclusion. Verify-with-Advocate flags.</div></div>
-            <div class="mc-resource"><div class="mc-resource-title">Full underwriting knockouts</div><div class="mc-resource-desc">All 5 HI questions verbatim. HHC Q1-Q3 (plus Plan C Q4). Pivot guidance for each fail.</div></div>
-            <div class="mc-resource"><div class="mc-resource-title">CPC fit filters</div><div class="mc-resource-desc">Medicaid (do-not-sell) and Medigap (skip HI). Discovery questions and pivot scripts.</div></div>
-            <div class="mc-resource"><div class="mc-resource-title">Pitch frame library</div><div class="mc-resource-desc">Searchable library of frames — cross-sell pivots, objection responses, transitions, closes.</div></div>
-            <div class="mc-resource"><div class="mc-resource-title">Rx Calculator (embedded)</div><div class="mc-resource-desc">Plug in the customer's medications, see the recommended plan and net monthly cost. Same tool as the standalone version.</div></div>
-            <div class="mc-resource"><div class="mc-resource-title">Compliance quick-reference</div><div class="mc-resource-desc">TPMO disclaimer, verbal SOA template, recording disclosure, the three never-says.</div></div>
+            <a class="mc-resource" href="#res-state-matrix"><div class="mc-resource-title">State availability matrix</div><div class="mc-resource-desc">HHC and HI Shield exclusions, Rx reimbursement carve-outs, Idaho's special rules.</div></a>
+            <a class="mc-resource" href="#res-knockouts"><div class="mc-resource-title">Full underwriting knockouts</div><div class="mc-resource-desc">All HI Shield disqualifiers. HHC Q1–Q3 plus Plan C Q4. Pivot guidance per fail.</div></a>
+            <a class="mc-resource" href="#res-fit-filters"><div class="mc-resource-title">CPC fit filters</div><div class="mc-resource-desc">Medicaid (do-not-sell) and Medigap (skip HI). Discovery questions and pivot scripts.</div></a>
+            <a class="mc-resource" href="#res-frames"><div class="mc-resource-title">Pitch frame library</div><div class="mc-resource-desc">Canonical verbatim lines — Preference Question, math reframe, commitment sequence, transitions.</div></a>
+            <a class="mc-resource" href="#res-rx-calc"><div class="mc-resource-title">Rx Calculator (embedded)</div><div class="mc-resource-desc">Live calculator embedded below — plug in meds, see plan and net monthly cost.</div></a>
+            <a class="mc-resource" href="#res-compliance"><div class="mc-resource-title">Compliance quick-reference</div><div class="mc-resource-desc">The three never-says, verbal SOA reference, recording disclosure, TPMO pointer.</div></a>
           </div>
 
-          <div class="mc-placeholder">Resource panel content coming in Phase 5.</div>
+          <!-- ============ RES 1 · State availability matrix ============ -->
+          <div class="mc-res-detail" id="res-state-matrix">
+            <div class="mc-res-detail-eyebrow">Reference 1 · By state</div>
+            <div class="mc-res-detail-title">State availability matrix</div>
+            <p class="mc-body">Both products are widely available, but a handful of states have carve-outs that change what you can sell — or break the math even when the product is available. Always verify with the Advocate if a customer's state isn't in this list and something feels off.</p>
+
+            <div class="mc-res-table">
+              <div class="mc-res-table-label">HI Shield excluded</div>
+              <div class="mc-res-table-val"><code>MT</code> <code>NM</code></div>
+              <div class="mc-res-table-label">HHC excluded</div>
+              <div class="mc-res-table-val"><code>MT</code> <code>NV</code> <code>MD</code> <code>MN</code> <code>ND</code> <code>UT</code> <code>VA</code> (plus a small number of state-matrix conflicts — verify with Advocate)</div>
+              <div class="mc-res-table-label">Rx reimbursement excluded</div>
+              <div class="mc-res-table-val"><code>KY</code> — HHC is available but Rx reimbursement is not, which usually breaks the net-cost math. Be honest about that.</div>
+              <div class="mc-res-table-label">Idaho special rules</div>
+              <div class="mc-res-table-val">270-day benefit max (vs. 360 elsewhere) and a 6-month pre-existing condition limitation. Mention both up front.</div>
+            </div>
+
+            <div class="mc-callout">
+              <span class="mc-callout-label">When to verify with Advocate</span>
+              If a customer's state isn't listed above as excluded, assume both products are available. If the Advocate flags a state-matrix conflict mid-call, <strong>defer to them, not memory</strong>. The state matrix updates more often than this page does.
+            </div>
+          </div>
+
+          <!-- ============ RES 2 · Underwriting knockouts ============ -->
+          <div class="mc-res-detail" id="res-knockouts">
+            <div class="mc-res-detail-eyebrow">Reference 2 · The knockouts</div>
+            <div class="mc-res-detail-title">Full underwriting knockouts</div>
+            <p class="mc-body">Layer 2 (hard) knockouts. Any "yes" on the items below disqualifies the customer from the listed product. Run these before the math, after the Preference Question. If HI fails, pivot to HHC only. If HHC fails, graceful DQ + future callback note.</p>
+
+            <h4 class="mc-h4">HI Shield 2.0 — disqualify if any "yes"</h4>
+            <ul class="mc-list">
+              <li><strong>In the past 24 months:</strong> cancer (excluding basal-cell skin), heart attack, CHF, stroke, TIA, peripheral vascular disease, heart/bypass surgery, defibrillator; insulin-dependent diabetes; Crohn's, ulcerative colitis, liver/pancreas/kidney disease, organ transplant, disease-related amputation; COPD, emphysema, oxygen use; Alzheimer's, dementia, memory-loss meds, Parkinson's, ALS, MS, muscular dystrophy, paralysis; alcohol/substance abuse including opioid addiction; bipolar, schizophrenia, manic or major depression.</li>
+              <li><strong>Currently:</strong> uses wheelchair OR needs help with any ADL (bathing, dressing, eating, toileting, transferring, taking medications).</li>
+              <li><strong>Currently:</strong> confined to hospital, ALF, nursing home, psychiatric or correctional facility — OR receiving home health / hospice services.</li>
+              <li><strong>Ever:</strong> diagnosed or treated for AIDS, ARC, or HIV.</li>
+              <li><strong>In the past 24 months:</strong> told a diagnostic test was needed or had abnormal results; hospitalized; had surgery recommended/scheduled/performed; OR used tobacco / nicotine.</li>
+            </ul>
+
+            <h4 class="mc-h4">HHC — Plans A &amp; B (Q1–Q3) and Plan C (adds Q4)</h4>
+            <ul class="mc-list">
+              <li><strong>Q1 · Currently:</strong> living in nursing home or assisted living facility, OR receiving home healthcare or similar care.</li>
+              <li><strong>Q2 · Requires assistance</strong> (or device) from another person for any of the 6 ADLs — bathing, continence, dressing, eating, toileting, transferring.</li>
+              <li><strong>Q3 · In the past 12 months:</strong> diagnosed with Alzheimer's, dementia, or memory loss; prescribed medications for these; OR received medical advice for these conditions.</li>
+              <li><strong>Q4 · Plan C only — in the next 60 days:</strong> scheduled for or anticipating hospital admission, nursing home / ALF stay, home healthcare services, OR surgery.</li>
+            </ul>
+
+            <div class="mc-callout mc-callout--warn">
+              <span class="mc-callout-label">Pivot guidance</span>
+              <strong>HI fails, HHC clean:</strong> pitch HHC only. Most agents try to "save" the HI sale — don't. Move on cleanly.<br>
+              <strong>HHC fails:</strong> graceful DQ. Use the Pillar 3.2 break + bridge: be honest, offer a future callback when the look-back clears, end on a respectful note. The customer remembers the agent who didn't pretend.
+            </div>
+          </div>
+
+          <!-- ============ RES 3 · Fit filters ============ -->
+          <div class="mc-res-detail" id="res-fit-filters">
+            <div class="mc-res-detail-eyebrow">Reference 3 · Layer 0 filters</div>
+            <div class="mc-res-detail-title">CPC fit filters</div>
+            <p class="mc-body">Before underwriting, two CPC-specific filters run in the first 60 seconds of discovery. Medicaid is a do-not-sell rule (chargeback exposure). Medigap means HI doesn't add value — HHC only.</p>
+
+            <h4 class="mc-h4">Medicaid · do-not-sell</h4>
+            <div class="mc-mini-script">
+              <div class="mc-mini-num">Discovery question</div>
+              <div class="mc-mini-response">"Are you on Medicaid at all, or just Medicare?"</div>
+              <div class="mc-mini-why"><span class="mc-mini-why-label">Why this exists</span>Medicaid customers cancel at much higher rates — financial strain leads to lapse, which means chargebacks on the agent and CTM exposure for CPC. This is a business rule, not an underwriting one. Graceful DQ at ~3 minutes is the right move.</div>
+            </div>
+
+            <h4 class="mc-h4">Medigap · skip HI, pitch HHC only</h4>
+            <div class="mc-mini-script">
+              <div class="mc-mini-num">Discovery question</div>
+              <div class="mc-mini-response">"Do you have a Medicare Supplement plan — Medigap — or Medicare Advantage, or just Original Medicare?"</div>
+              <div class="mc-mini-why"><span class="mc-mini-why-label">Why this matters</span>Medigap already covers the hospital copay HI Shield targets — it adds no value. But Medigap can't fill the home-care gap (HHC's territory). So Medigap holders are HHC-only customers, not cross-sells. Pitching HI to a Medigap customer makes you look like you don't understand their coverage.</div>
+            </div>
+          </div>
+
+          <!-- ============ RES 4 · Pitch frame library ============ -->
+          <div class="mc-res-detail" id="res-frames">
+            <div class="mc-res-detail-eyebrow">Reference 4 · Canonical lines</div>
+            <div class="mc-res-detail-title">Pitch frame library</div>
+            <p class="mc-body">The verbatim phrases that recur across the best calls. These come from the Crash Course — Master Class Pillar 2 scripts apply them in context. Bookmark this page and pull it up when you want the exact wording.</p>
+
+            <h4 class="mc-h4">Stage 2 · Discovery</h4>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">Preference Question</span>
+              <div class="mc-res-frame-line">"If you ever needed care, would you rather stay home or go into a facility?"</div>
+            </div>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">The doctor reframe</span>
+              <div class="mc-res-frame-line">"Most doctors don't mention this — they're focused on your medical care, not your insurance gaps. This isn't a medical product; it's a financial-protection product."</div>
+            </div>
+
+            <h4 class="mc-h4">Stage 4 · Math reframe</h4>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">Pre-frame</span>
+              <div class="mc-res-frame-line">"Bear with me — I'm going to give you the gross premium first, and then the math that actually matters."</div>
+            </div>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">The Rx-net-cost landing</span>
+              <div class="mc-res-frame-line">"If I told you the prescription reimbursement covers most of your premium — meaning you're paying maybe $3 to $5 a month out of pocket — that changes the math for you, doesn't it?"</div>
+            </div>
+
+            <h4 class="mc-h4">Stage 5 · Commitment sequence</h4>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">Q1 · Micro-close</span>
+              <div class="mc-res-frame-line">"Do you feel like this could be the answer for you?"</div>
+            </div>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">Q2 · The non-obvious move</span>
+              <div class="mc-res-frame-line">"Hold on — why do you feel like it is, though?"</div>
+            </div>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">Q3 · The specific anchor</span>
+              <div class="mc-res-frame-line">"What specific parts of what we went over today do you feel are going to really help you the most?"</div>
+            </div>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">Q4 · The destination check</span>
+              <div class="mc-res-frame-line">"Do you feel like this is something you can have that'll get you where you want to go?"</div>
+            </div>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">The application transition</span>
+              <div class="mc-res-frame-line">"Really, the next step is just confirming the application — takes about 10 minutes. Sound fair?"</div>
+            </div>
+
+            <h4 class="mc-h4">Cross-sell transition (MA call → ancillary)</h4>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">The bridge</span>
+              <div class="mc-res-frame-line">"Last thing before I let you go — your new plan has a $300/day hospital copay. Most members don't realize there's a way to cover that, plus daily-living help at home. Two quick questions and I'll know if this fits."</div>
+            </div>
+
+            <h4 class="mc-h4">Graceful DQ</h4>
+            <div class="mc-res-frame">
+              <span class="mc-res-frame-tag">The break</span>
+              <div class="mc-res-frame-line">"If you're not filling 4+ prescriptions regularly, this benefit isn't going to make the math work. I'm not going to waste your time pretending it does."</div>
+            </div>
+          </div>
+
+          <!-- ============ RES 5 · Rx Calculator iframe ============ -->
+          <div class="mc-res-detail" id="res-rx-calc">
+            <div class="mc-res-detail-eyebrow">Reference 5 · Live tool</div>
+            <div class="mc-res-detail-title">Rx Calculator (embedded)</div>
+            <p class="mc-body">The standalone tool, embedded here so you can run math without leaving the Master Class. Same calculator, same plan recommendations, same net-cost output. Use it during drill mode or on live calls.</p>
+
+            <div class="mc-res-iframe-wrap">
+              <iframe class="mc-res-iframe" src="https://duynomite.github.io/unl-rx-calculator/" loading="lazy" title="UNL Rx Reimbursement Calculator"></iframe>
+              <div class="mc-res-iframe-fallback">If the calculator doesn't load, open it in a new tab: <a href="https://duynomite.github.io/unl-rx-calculator/" target="_blank" rel="noopener">duynomite.github.io/unl-rx-calculator/</a></div>
+            </div>
+          </div>
+
+          <!-- ============ RES 6 · Compliance ============ -->
+          <div class="mc-res-detail" id="res-compliance">
+            <div class="mc-res-detail-eyebrow">Reference 6 · The guardrails</div>
+            <div class="mc-res-detail-title">Compliance quick-reference</div>
+            <p class="mc-body">CPC's inbound-only model is structurally compliant by design. These are the phrases you avoid and the language you use instead. For verbatim TPMO disclaimer + SOA scripts, see the compliance playbook in the agent portal.</p>
+
+            <h4 class="mc-h4">The three never-says</h4>
+
+            <div class="mc-res-never">
+              <div class="mc-res-never-bad">Never say: "long-term care insurance" / "LTC plan"</div>
+              <div class="mc-res-never-good">Say: "This is a supplemental indemnity policy that pays cash benefits during a period of home care."</div>
+            </div>
+
+            <div class="mc-res-never">
+              <div class="mc-res-never-bad">Never say: "You'll save money on prescriptions" / "prescription savings program"</div>
+              <div class="mc-res-never-good">Say: "The plan reimburses $10 per generic and $25 per brand-name fill, up to your tier's annual cap. For a member with regular prescriptions, that offsets most of the premium."</div>
+            </div>
+
+            <div class="mc-res-never">
+              <div class="mc-res-never-bad">Never say: "This replaces Medicare" / "better than Medicare"</div>
+              <div class="mc-res-never-good">Say: "This is a supplemental policy. Benefits are paid as outlined in the policy. This does not change or replace your Medicare coverage."</div>
+            </div>
+
+            <h4 class="mc-h4">Verbal SOA</h4>
+            <p class="mc-body">Capture a verbal SOA at the top of every call that enumerates every product category you might discuss — MA, MAPD, PDP, HI, HHC. The customer says yes/no to each. The Advocate's compliance script covers this in detail; you don't need to memorize the exact wording, but you do need to know <strong>why</strong> it happens: it protects the customer's right to choose what gets pitched, and it protects you from MCMG violations later.</p>
+
+            <h4 class="mc-h4">Recording disclosure</h4>
+            <p class="mc-body">Every call opens with the recording disclosure: "This call is being recorded for quality and compliance purposes." Said once, at the top, calmly. Don't bury it in a longer sentence — the prospect should clearly hear it.</p>
+
+            <div class="mc-callout">
+              <span class="mc-callout-label">The deeper rule</span>
+              Compliance isn't an obstacle — it's a <strong>shield</strong>. The agents who treat it as protection (theirs and the customer's) close at higher rates than the agents who treat it as red tape. CPC's inbound-only model is structurally one of the most compliant TPMO postures CMS allows. Lean into that.
+            </div>
+          </div>
         </section>
 
         <!-- Terminal CTA — journey complete -->
@@ -3595,7 +3935,7 @@
     <div class="mc-footer-inner">
       <div>
         <div class="mc-footer-brand">Ancillary Sales Master Class</div>
-        <div class="mc-footer-sub">UNL · Clear Path Coverage · v1.0 (skeleton)</div>
+        <div class="mc-footer-sub">UNL · Clear Path Coverage · v1.0</div>
       </div>
       <div class="mc-footer-links">
         <a href="https://duynomite.github.io/unl-crash-course/" target="_blank" rel="noopener">Crash Course</a>
@@ -3692,6 +4032,362 @@
         if (text) text.textContent = pct + '% complete';
       }
       updateProgress();
+
+      /* ============================================================
+         CAPSTONE — Margaret simulation + scoring + cert
+         ============================================================ */
+
+      const SIM_QUESTIONS = [
+        {
+          pillar: 'read', pillarLabel: 'Pillar 1 · Read', stage: 'The opener',
+          setup: 'Margaret picks up. "Hello?" — quiet, slightly formal, a TV playing low in the background. She doesn\'t sound rushed, but she doesn\'t sound energetic either.',
+          prompt: 'What\'s your opener?',
+          maxScore: 5,
+          choices: [
+            { text: '"Hi Margaret! Sarah from Clear Path Coverage — how are you today?!" (bright, upbeat)', score: 0, level: 'incorrect', feedback: 'Eager-fast tonality on a subdued prospect. Senior-call principle: always pace below the prospect, never above. Bright-and-cheery against quiet-and-formal reads as pressure before you\'ve said three sentences.', cite: 'Unit 1.2 — Tonality matching' },
+            { text: '"Hi Margaret. (pause) This is Sarah from Clear Path Coverage. Quick courtesy call — do you have a minute, or did I catch you at a bad time?"', score: 5, level: 'correct', feedback: 'Paced delivery, real pauses, permission gate with a respectful out. You\'re matching her energy without performing. She\'ll feel heard before you\'ve said anything substantive.', cite: 'Units 1.1 + 1.2' },
+            { text: '"Hi Margaret, this is Sarah, sorry to bother you, I know you\'re busy, I just need a couple minutes of your time..."', score: 2, level: 'partial', feedback: 'Energy match is close, but apologetic framing undersells your professional posture. "Sorry to bother you" puts you in low-status mode before you\'ve earned the discovery question.', cite: 'Unit 1.1 — Seven-second test' }
+          ]
+        },
+        {
+          pillar: 'read', pillarLabel: 'Pillar 1 · Read', stage: 'Pacing the rest of the call',
+          setup: 'She says "I have a minute, sure." Same quiet, careful tone. You\'re moving into discovery.',
+          prompt: 'How do you pace the rest of the call?',
+          maxScore: 5,
+          choices: [
+            { text: 'Match her quiet energy at the start, then slowly pull the conversation 10-15% slower than hers.', score: 5, level: 'correct', feedback: 'Textbook senior-call pacing. Match and pace down — never up. Quiet prospects settle in further when the agent anchors calm below them.', cite: 'Unit 1.2 — Tonality matching' },
+            { text: 'Match her energy at the start, then lift it as you build rapport — bring her up to your normal sales tempo.', score: 0, level: 'incorrect', feedback: 'Lifting energy on a subdued prospect is the most common tonality mistake. The Pillar 1 warn-callout names this directly: anchor calm, don\'t lift. She\'ll feel pressured even if you can\'t hear it.', cite: 'Unit 1.2 — "the most common mistake"' },
+            { text: 'Stay perfectly at her current pace the whole call.', score: 2, level: 'partial', feedback: 'You won\'t lose her this way — but you miss the pull-below technique that creates the "calm expert" feeling. Match isn\'t as effective as match-and-pull-down.', cite: 'Unit 1.2' }
+          ]
+        },
+        {
+          pillar: 'run', pillarLabel: 'Pillar 2 · Run', stage: 'Stage 2 — Problem Awareness',
+          setup: 'Five minutes in. Margaret mentioned her late husband Tom "used to handle the insurance." She takes 4 generics plus Eliquis monthly. You\'ve done basic situation discovery. Time to move into Problem Awareness.',
+          prompt: 'What\'s your next question?',
+          maxScore: 5,
+          choices: [
+            { text: '"If you ever needed help at home with daily things, would you rather stay at your house or go into a facility?"', score: 5, level: 'correct', feedback: 'The Preference Question. Triple-duty (data + rapport + seed). ~95% say "home" — and that answer becomes your Stage 4 anchor when you describe the home-care coverage.', cite: 'Crash Course §4 — Preference Question' },
+            { text: '"What\'s your biggest fear about Medicare?"', score: 0, level: 'incorrect', feedback: 'Too direct. Fear-based framing breaks rapport — especially with a careful prospect. Senior calls don\'t respond to "biggest fear" prompts; they respond to "would you rather" framing.', cite: 'Crash Course §4 — NEPQ vs. fear-based' },
+            { text: '"Have you ever thought about what would happen if you got sick and needed help?"', score: 2, level: 'partial', feedback: 'Right direction (Problem Awareness) but "got sick" framing is too leading — sounds like a setup for a fear sell. Reframe as preference, not contingency.', cite: 'Crash Course §4' }
+          ]
+        },
+        {
+          pillar: 'run', pillarLabel: 'Pillar 2 · Run', stage: 'Stage 4 — Math reframe',
+          setup: 'Margaret answers "home, definitely." She\'s engaged. She asks about cost. Time to land the math.',
+          prompt: 'How do you frame it?',
+          maxScore: 5,
+          choices: [
+            { text: '"The premium is $74 a month for Plan B. So that\'s $888 a year."', score: 0, level: 'incorrect', feedback: 'Leading with gross with no reframe is THE math mistake. $888 a year sounds terrifying without context. The Crash Course is explicit: pre-frame the gross as the number that doesn\'t matter, then land the net.', cite: 'Crash Course §5 — Math reframe' },
+            { text: '"Bear with me — I\'m going to give you the gross premium first, then the math that actually matters. Premium\'s $74/month. With Eliquis reimbursement plus your 4 generic fills, the net out-of-pocket is about $13 a month."', score: 5, level: 'correct', feedback: 'The pre-frame disarms the gross number; then you land the net. Verbatim move from the Crash Course. It works because it lets prospects hear both numbers without the first one breaking the conversation.', cite: 'Crash Course §5' },
+            { text: '"It\'s basically free — the Eliquis reimbursement alone covers most of the premium."', score: 2, level: 'partial', feedback: 'Right direction but "basically free" overpromises and triggers skepticism. "Net cost of about $13" is more honest and lands better. Compliance also frowns on "free."', cite: 'Crash Course §5 + §7' }
+          ]
+        },
+        {
+          pillar: 'handle', pillarLabel: 'Pillar 3 · Handle', stage: 'The curveball',
+          setup: 'Margaret was nodding along with the math. Then she pauses. "I\'m sorry, I just... my husband Tom passed eight months ago. He handled all of this. I\'m just trying..." Her voice breaks. She\'s crying quietly on the line.',
+          prompt: 'What do you do?',
+          maxScore: 10,
+          choices: [
+            { text: '"Take a moment." (long pause) "We can absolutely come back to this another day if today isn\'t right." Then stay quiet and let her decide whether to continue.', score: 10, level: 'correct', feedback: 'Master move. Pause the call. Don\'t move forward until SHE invites it. The offer to reschedule is genuine, not a sales technique. Sales-mode and grief-mode are mutually exclusive — switch fully or not at all.', cite: 'Unit 3.8 — Emotional curveballs, Type 1' },
+            { text: '"I\'m so sorry, Margaret. That\'s incredibly hard. But you know what — this is exactly why having this kind of protection matters. Let me show you..."', score: 0, level: 'incorrect', feedback: 'Acknowledging then pivoting back to sales mode is worse than not acknowledging at all. The "but you know what" turn breaks her trust completely. Unit 3.8 names this exactly: switch fully or not at all.', cite: 'Unit 3.8' },
+            { text: '"I\'m so sorry. Take your time." (Wait 5 seconds, then:) "Should we keep going, or pick this up another day?"', score: 4, level: 'partial', feedback: 'You acknowledged and offered a reschedule, but you took the lead on when to continue. The master move waits for HER to invite the continuation. Letting her set the pace transfers control respectfully.', cite: 'Unit 3.8 — Type 1: Crying' }
+          ]
+        },
+        {
+          pillar: 'close', pillarLabel: 'Pillar 4 · Close', stage: 'The micro-close moment',
+          setup: 'Margaret took a minute, came back, and said "Tom would have wanted me to handle this." You finished the math. She\'s nodding, asking specific questions, energy is up. She just asked: "When would coverage start?"',
+          prompt: 'What\'s your move?',
+          maxScore: 5,
+          choices: [
+            { text: 'Run the four pre-checks mentally: math heard ✓, knockouts clean ✓, specific question asked ✓, tone leaning in ✓. Then ask: "Do you feel this is the answer for you?" Then stop talking.', score: 5, level: 'correct', feedback: 'All four pre-checks are green. This is the moment. Ask the micro-close direct, calm, no preamble — then stop talking and let her answer.', cite: 'Unit 4.2 — Micro-close' },
+            { text: 'Keep listing more benefits to make sure she really gets the value before you close.', score: 0, level: 'incorrect', feedback: 'Selling past ready. Unit 4.1 names this as the mistake: flat tone after engaged tone means you missed the close. When a buying signal fires, your job switches from "convince" to "execute the handoff."', cite: 'Unit 4.1' },
+            { text: 'Ask "Are you ready to move forward?"', score: 2, level: 'partial', feedback: 'Right impulse, wrong phrasing. "Ready to move forward" is transactional. "Do you feel this is the answer for you?" is collaborative. The phrasing matters more than agents realize.', cite: 'Unit 4.2 + Unit 4.3' }
+          ]
+        },
+        {
+          pillar: 'close', pillarLabel: 'Pillar 4 · Close', stage: 'After the yes',
+          setup: 'Margaret says: "Yes — I think it is."',
+          prompt: 'What do you do next?',
+          maxScore: 5,
+          choices: [
+            { text: '"Great! Let me bring on the Advocate to walk through the application."', score: 2, level: 'partial', feedback: 'Misses Q2 — the persistency move. Skipping Q2 costs persistency in month 4 when Margaret can\'t remember why she bought. Q2 is the cheapest persistency insurance you\'ll do all day.', cite: 'Unit 4.3 — Double commit' },
+            { text: '"Tell me — why do you feel it is?" Then stay quiet and let her answer.', score: 5, level: 'correct', feedback: 'Q2 — the non-obvious move. She sells herself. Her own answer becomes the reason she remembers in month 4. The agent\'s reasons fade; the prospect\'s reasons stick.', cite: 'Unit 4.3 — Double commit' },
+            { text: '"That\'s exactly right — and also it covers home care, ambulance, hospital benefits, and..."', score: 0, level: 'incorrect', feedback: 'Adding your own reasons after her yes dilutes the commitment. Unit 4.3 callout names this exactly: "what kills Q2." Let HER reason be the reason.', cite: 'Unit 4.3' }
+          ]
+        }
+      ];
+
+      const capState = { currentIdx: 0, answers: [], scores: { read: 0, run: 0, handle: 0, close: 0 } };
+
+      function capMakeEl(tag, cls, text) {
+        const el = document.createElement(tag);
+        if (cls) el.className = cls;
+        if (text !== undefined && text !== null) el.textContent = text;
+        return el;
+      }
+
+      function capStart() {
+        const startCard = document.getElementById('cap-start');
+        if (startCard) startCard.style.display = 'none';
+        const sim = document.getElementById('cap-sim');
+        if (sim) sim.classList.add('is-active');
+        capRenderQuestion();
+        capUpdateProgress();
+      }
+
+      function capRenderQuestion() {
+        const idx = capState.currentIdx;
+        const q = SIM_QUESTIONS[idx];
+        const container = document.getElementById('cap-question-container');
+        if (!container) return;
+        while (container.firstChild) container.removeChild(container.firstChild);
+
+        const card = capMakeEl('div', 'mc-cap-card');
+        card.appendChild(capMakeEl('div', 'mc-cap-pillar-tag', q.pillarLabel));
+        card.appendChild(capMakeEl('div', 'mc-cap-stage', q.stage));
+        card.appendChild(capMakeEl('div', 'mc-cap-setup', q.setup));
+        card.appendChild(capMakeEl('div', 'mc-cap-prompt', q.prompt));
+
+        const choicesWrap = capMakeEl('div', 'mc-cap-choices');
+        const letters = ['A', 'B', 'C', 'D'];
+        q.choices.forEach((c, i) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'mc-cap-choice';
+          const letter = capMakeEl('span', 'mc-cap-choice-letter', letters[i] + ' ·');
+          btn.appendChild(letter);
+          btn.appendChild(document.createTextNode(' ' + c.text));
+          btn.addEventListener('click', function () { capSelectChoice(idx, i, btn); });
+          choicesWrap.appendChild(btn);
+        });
+        card.appendChild(choicesWrap);
+
+        const fb = capMakeEl('div', 'mc-cap-feedback');
+        fb.id = 'cap-feedback-' + idx;
+        card.appendChild(fb);
+
+        container.appendChild(card);
+      }
+
+      function capSelectChoice(qIdx, choiceIdx, btn) {
+        if (capState.answers[qIdx]) return;
+        const q = SIM_QUESTIONS[qIdx];
+        const choice = q.choices[choiceIdx];
+
+        capState.answers[qIdx] = { qIdx: qIdx, choiceIdx: choiceIdx, score: choice.score, pillar: q.pillar };
+        capState.scores[q.pillar] += choice.score;
+
+        const allBtns = btn.parentNode.querySelectorAll('.mc-cap-choice');
+        allBtns.forEach(function (b, i) {
+          b.disabled = true;
+          if (i === choiceIdx) b.classList.add('is-selected', 'is-' + choice.level);
+          if (choice.level !== 'correct' && q.choices[i].level === 'correct') b.classList.add('is-correct-answer');
+        });
+
+        const fb = document.getElementById('cap-feedback-' + qIdx);
+        while (fb.firstChild) fb.removeChild(fb.firstChild);
+        fb.className = 'mc-cap-feedback is-visible mc-cap-feedback--' + choice.level;
+
+        const labelText = choice.level === 'correct' ? 'Master move' : choice.level === 'partial' ? 'Close — but' : 'Off-target';
+        const labelEl = capMakeEl('div', 'mc-cap-feedback-label', labelText);
+        const points = capMakeEl('span', 'mc-cap-feedback-points', '+' + choice.score + ' / ' + q.maxScore);
+        labelEl.appendChild(points);
+        fb.appendChild(labelEl);
+
+        fb.appendChild(capMakeEl('div', null, choice.feedback));
+        fb.appendChild(capMakeEl('div', 'mc-cap-feedback-cite', '↗ ' + choice.cite));
+
+        const nextBtn = document.createElement('button');
+        nextBtn.type = 'button';
+        nextBtn.className = 'mc-cap-next-btn';
+        nextBtn.textContent = qIdx === SIM_QUESTIONS.length - 1 ? 'See your results →' : 'Next decision →';
+        nextBtn.addEventListener('click', capNext);
+        fb.appendChild(nextBtn);
+
+        capUpdateProgress();
+      }
+
+      function capUpdateProgress() {
+        const answered = capState.answers.filter(Boolean).length;
+        const total = SIM_QUESTIONS.length;
+        const fill = document.getElementById('cap-progress-fill');
+        const count = document.getElementById('cap-progress-count');
+        if (fill) fill.style.width = (answered / total * 100) + '%';
+        if (count) count.textContent = answered + ' / ' + total;
+      }
+
+      function capNext() {
+        capState.currentIdx++;
+        if (capState.currentIdx >= SIM_QUESTIONS.length) {
+          capShowSummary();
+        } else {
+          capRenderQuestion();
+          capUpdateProgress();
+          const sim = document.getElementById('cap-sim');
+          if (sim) sim.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      function capShowSummary() {
+        const qContainer = document.getElementById('cap-question-container');
+        if (qContainer) while (qContainer.firstChild) qContainer.removeChild(qContainer.firstChild);
+
+        const container = document.getElementById('cap-summary-container');
+        if (!container) return;
+        while (container.firstChild) container.removeChild(container.firstChild);
+
+        const total = capState.scores.read + capState.scores.run + capState.scores.handle + capState.scores.close;
+        const allPillarsAbove5 = capState.scores.read >= 5 && capState.scores.run >= 5 && capState.scores.handle >= 5 && capState.scores.close >= 5;
+        const passed = total >= 28 && allPillarsAbove5;
+
+        const summary = capMakeEl('div', 'mc-cap-summary');
+        summary.appendChild(capMakeEl('div', 'mc-cap-summary-eyebrow ' + (passed ? 'is-pass' : 'is-fail'), passed ? '✓ Capstone passed' : '◯ Capstone — review and retry'));
+        summary.appendChild(capMakeEl('div', 'mc-cap-summary-title', passed ? 'You\'re certified to take live calls.' : 'Close — a couple of pillars to sharpen.'));
+        summary.appendChild(capMakeEl('p', 'mc-cap-summary-body', passed
+          ? 'Your four-pillar competence is at the bar UNL agents need to hit. Generate your certificate below — print it for your records or share the verification ID with your pod leader.'
+          : 'You need 28 points total AND at least 5/10 on each individual pillar. Review the pillars below 5 and run the simulation again — Margaret will be patient.'));
+
+        const totalDiv = capMakeEl('div', 'mc-cap-total');
+        totalDiv.appendChild(capMakeEl('div', 'mc-cap-total-label', 'Total score'));
+        const totalVal = capMakeEl('div', 'mc-cap-total-val');
+        totalVal.appendChild(capMakeEl('span', null, total));
+        totalVal.appendChild(capMakeEl('small', null, '/ 40 · pass at 28+ with no pillar below 5'));
+        totalDiv.appendChild(totalVal);
+        summary.appendChild(totalDiv);
+
+        const scoreboard = capMakeEl('div', 'mc-cap-scoreboard');
+        const pillars = [
+          { key: 'read', label: 'Pillar 1', name: 'Read the Customer' },
+          { key: 'run', label: 'Pillar 2', name: 'Run the Call' },
+          { key: 'handle', label: 'Pillar 3', name: 'Handle Curveballs' },
+          { key: 'close', label: 'Pillar 4', name: 'Close with Confidence' }
+        ];
+        pillars.forEach(function (p) {
+          const score = capState.scores[p.key];
+          const card = capMakeEl('div', 'mc-cap-score ' + (score >= 5 ? '' : 'mc-cap-score--low'));
+          card.appendChild(capMakeEl('div', 'mc-cap-score-pillar', p.label));
+          card.appendChild(capMakeEl('div', 'mc-cap-score-name', p.name));
+          const val = capMakeEl('div', 'mc-cap-score-val');
+          val.appendChild(capMakeEl('span', 'mc-cap-score-num', score));
+          val.appendChild(capMakeEl('span', 'mc-cap-score-den', '/ 10'));
+          card.appendChild(val);
+          scoreboard.appendChild(card);
+        });
+        summary.appendChild(scoreboard);
+
+        if (passed) {
+          const certWrap = capMakeEl('div', 'mc-cap-cert-wrap');
+          const label = capMakeEl('label', 'mc-cap-name-label', 'Enter your full name to generate your certificate');
+          label.htmlFor = 'cap-name-input';
+          certWrap.appendChild(label);
+
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.className = 'mc-cap-name-input';
+          input.id = 'cap-name-input';
+          input.placeholder = 'e.g. Sarah Martinez';
+          input.maxLength = 60;
+          input.value = localStorage.getItem('mc_cap_name') || '';
+          certWrap.appendChild(input);
+
+          const certBox = capMakeEl('div');
+          certBox.id = 'cap-cert-render';
+          certWrap.appendChild(certBox);
+
+          function renderCertHandler() {
+            const name = (input.value.trim() || 'Your name');
+            const date = new Date();
+            const data = capBuildCert(name, date, total, capState.scores);
+            capRenderCert(certBox, data);
+            if (input.value.trim()) {
+              try {
+                localStorage.setItem('mc_cap_name', input.value.trim());
+                localStorage.setItem('mc_cap_cert', JSON.stringify({
+                  name: input.value.trim(), date: date.toISOString(), total: total,
+                  scores: capState.scores, verificationId: data.verificationId
+                }));
+              } catch (e) { /* ignore localStorage errors */ }
+            }
+          }
+          input.addEventListener('input', renderCertHandler);
+          renderCertHandler();
+
+          summary.appendChild(certWrap);
+        }
+
+        const actions = capMakeEl('div', 'mc-cap-actions');
+        if (passed) {
+          const printBtn = document.createElement('button');
+          printBtn.type = 'button';
+          printBtn.className = 'mc-cap-btn mc-cap-btn-primary';
+          printBtn.textContent = 'Print certificate';
+          printBtn.addEventListener('click', function () { window.print(); });
+          actions.appendChild(printBtn);
+        }
+        const retryBtn = document.createElement('button');
+        retryBtn.type = 'button';
+        retryBtn.className = 'mc-cap-btn mc-cap-btn-secondary';
+        retryBtn.textContent = passed ? 'Run simulation again' : 'Try again';
+        retryBtn.addEventListener('click', capRetry);
+        actions.appendChild(retryBtn);
+        summary.appendChild(actions);
+
+        container.appendChild(summary);
+        summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function capRetry() {
+        capState.currentIdx = 0;
+        capState.answers = [];
+        capState.scores = { read: 0, run: 0, handle: 0, close: 0 };
+        const sc = document.getElementById('cap-summary-container');
+        if (sc) while (sc.firstChild) sc.removeChild(sc.firstChild);
+        capRenderQuestion();
+        capUpdateProgress();
+        const sim = document.getElementById('cap-sim');
+        if (sim) sim.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function capBuildCert(name, date, total, scores) {
+        const yyyymmdd = date.getFullYear().toString() +
+          String(date.getMonth() + 1).padStart(2, '0') +
+          String(date.getDate()).padStart(2, '0');
+        const hashInput = (name + '|' + yyyymmdd).toLowerCase();
+        let hash = 0;
+        for (let i = 0; i < hashInput.length; i++) {
+          hash = ((hash << 5) - hash + hashInput.charCodeAt(i)) | 0;
+        }
+        const hashStr = Math.abs(hash).toString(36).padStart(6, '0').slice(0, 6).toUpperCase();
+        const verificationId = 'UNL-MC-' + yyyymmdd + '-' + hashStr;
+        const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        return { name: name, dateStr: dateStr, verificationId: verificationId, total: total };
+      }
+
+      function capRenderCert(container, data) {
+        while (container.firstChild) container.removeChild(container.firstChild);
+        const cert = capMakeEl('div', 'mc-cert');
+        cert.appendChild(capMakeEl('div', 'mc-cert-mark', '★'));
+        cert.appendChild(capMakeEl('div', 'mc-cert-eyebrow', 'UNL · Clear Path Coverage'));
+        cert.appendChild(capMakeEl('div', 'mc-cert-title', 'Ancillary Sales Master Class'));
+        cert.appendChild(capMakeEl('div', 'mc-cert-sub', 'Capstone Certification'));
+        cert.appendChild(capMakeEl('div', 'mc-cert-presented', 'This certifies that'));
+        cert.appendChild(capMakeEl('div', 'mc-cert-name', data.name));
+        cert.appendChild(capMakeEl('p', 'mc-cert-body', 'has completed the Master Class Capstone — demonstrating competence in reading the customer, running the call, handling curveballs, and closing with confidence. Certified ready for live UNL ancillary calls.'));
+        const meta = capMakeEl('div', 'mc-cert-meta-grid');
+        const c1 = document.createElement('div');
+        c1.appendChild(capMakeEl('div', 'mc-cert-meta-label', 'Date issued'));
+        c1.appendChild(capMakeEl('div', 'mc-cert-meta-val', data.dateStr));
+        meta.appendChild(c1);
+        const c2 = document.createElement('div');
+        c2.appendChild(capMakeEl('div', 'mc-cert-meta-label', 'Verification ID'));
+        c2.appendChild(capMakeEl('div', 'mc-cert-meta-val', data.verificationId));
+        meta.appendChild(c2);
+        cert.appendChild(meta);
+        container.appendChild(cert);
+      }
+
+      const capStartBtn = document.getElementById('cap-start-btn');
+      if (capStartBtn) capStartBtn.addEventListener('click', capStart);
     })();
   </script>
 
