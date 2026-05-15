@@ -945,7 +945,7 @@
           <h2 class="mc-h2">Read the Customer</h2>
           <p class="mc-lede">The audio intelligence beneath the script. What separates agents who run conversations from agents who follow scripts.</p>
 
-          <p class="mc-body">A great script delivered by an agent who can't read the room is just noise. This pillar trains the underlying perception — tonality, pace, pause, the specific phrases that signal a buyer is leaning in or pulling back. By the end, you'll know how to adjust your delivery in real time based on what you're hearing.</p>
+          <p class="mc-body">A great script delivered by an agent who can't read the room is just noise. This pillar trains the underlying perception — tonality, pace, pause, the specific phrases that signal a buyer is leaning in or pulling back. By the end, you'll know how to adjust your delivery in real time based on what you're hearing. (For the NEPQ stage model and the Preference Question this pillar assumes you know, refer back to <a href="https://clearpathcoverage.com/unl-ancillary-sales-crash-course/" target="_blank" rel="noopener">Crash Course §4</a>.)</p>
 
           <!-- ============ UNIT 1.1 ============ -->
           <div class="mc-unit"><div class="mc-unit-header"><div class="mc-unit-title">1.1 · The seven-second test</div><div class="mc-unit-time">4 min</div></div><div class="mc-unit-desc">What you can tell about a prospect in their first seven seconds — and how to adjust your opener accordingly.</div></div>
@@ -3687,8 +3687,8 @@
 
           <div class="mc-cap-start-card" id="cap-start">
             <div class="mc-cap-start-label">Ready when you are</div>
-            <div class="mc-cap-start-title">Meet Margaret</div>
-            <p class="mc-cap-start-body">A 70-year-old widow in Tucson, Arizona. Inbound general benefit lead. Four generic prescriptions plus Eliquis. Health is mostly clean. She's still adjusting after losing her husband Tom eight months ago — he handled all the household finances. <strong>One curveball will fire mid-call.</strong> Seven decision points. Take your time. There's no clock running.</p>
+            <div class="mc-cap-start-title">Meet Helen</div>
+            <p class="mc-cap-start-body">A 70-year-old widow in Tucson, Arizona. Inbound general benefit lead. Four generic prescriptions plus Eliquis. Health is mostly clean. She's still adjusting after losing her husband Walter eight months ago — he handled all the household finances. <strong>One curveball will fire mid-call.</strong> Seven decision points. Take your time. There's no clock running.</p>
             <button type="button" class="mc-cap-start-btn" id="cap-start-btn">
               Start the simulation
               <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -3865,7 +3865,7 @@
           <div class="mc-res-detail" id="res-rx-calc">
             <div class="mc-res-detail-eyebrow">Reference 5 · Live tool</div>
             <div class="mc-res-detail-title">Rx Calculator (embedded)</div>
-            <p class="mc-body">The standalone tool, embedded here so you can run math without leaving the Master Class. Same calculator, same plan recommendations, same net-cost output. Use it during drill mode or on live calls.</p>
+            <p class="mc-body">The standalone tool, embedded here so you can run math without leaving the Master Class. Same calculator, same plan recommendations, same net-cost output. Use it while you read the Pillar 2 scripts, during the Capstone simulation, or on live calls.</p>
 
             <div class="mc-res-iframe-wrap">
               <iframe class="mc-res-iframe" src="https://duynomite.github.io/unl-rx-calculator/" loading="lazy" title="UNL Rx Reimbursement Calculator"></iframe>
@@ -3914,7 +3914,7 @@
           <div>
             <div class="unl-next-step-eyebrow">★ Step 4 of 4 · Journey complete</div>
             <h3>Your toolkit is ready. Time to take your first call.</h3>
-            <p>You've worked through the foundation, the math, and the practice patterns. Keep the Crash Course open for concept refresh, the Rx Calculator open on every pitch, and come back here for drill mode anytime you need to sharpen.</p>
+            <p>You've worked through the foundation, the math, and the practice patterns. Keep the Crash Course open for concept refresh, the Rx Calculator open on every pitch, and come back here to re-run the Capstone or revisit the Pillar 2 scripts anytime you need to sharpen.</p>
           </div>
           <div class="unl-next-step-actions">
             <a href="https://clearpathcoverage.com/unl-ancillary-sales-crash-course/" target="_top" rel="noopener" class="unl-next-step-btn">
@@ -4034,19 +4034,19 @@
       updateProgress();
 
       /* ============================================================
-         CAPSTONE — Margaret simulation + scoring + cert
+         CAPSTONE — Helen simulation + scoring + cert
          ============================================================ */
 
       const SIM_QUESTIONS = [
         {
           pillar: 'read', pillarLabel: 'Pillar 1 · Read', stage: 'The opener',
-          setup: 'Margaret picks up. "Hello?" — quiet, slightly formal, a TV playing low in the background. She doesn\'t sound rushed, but she doesn\'t sound energetic either.',
+          setup: 'Helen picks up. "Hello?" — quiet, slightly formal, a TV playing low in the background. She doesn\'t sound rushed, but she doesn\'t sound energetic either.',
           prompt: 'What\'s your opener?',
           maxScore: 5,
           choices: [
-            { text: '"Hi Margaret! Sarah from Clear Path Coverage — how are you today?!" (bright, upbeat)', score: 0, level: 'incorrect', feedback: 'Eager-fast tonality on a subdued prospect. Senior-call principle: always pace below the prospect, never above. Bright-and-cheery against quiet-and-formal reads as pressure before you\'ve said three sentences.', cite: 'Unit 1.2 — Tonality matching' },
-            { text: '"Hi Margaret. (pause) This is Sarah from Clear Path Coverage. Quick courtesy call — do you have a minute, or did I catch you at a bad time?"', score: 5, level: 'correct', feedback: 'Paced delivery, real pauses, permission gate with a respectful out. You\'re matching her energy without performing. She\'ll feel heard before you\'ve said anything substantive.', cite: 'Units 1.1 + 1.2' },
-            { text: '"Hi Margaret, this is Sarah, sorry to bother you, I know you\'re busy, I just need a couple minutes of your time..."', score: 2, level: 'partial', feedback: 'Energy match is close, but apologetic framing undersells your professional posture. "Sorry to bother you" puts you in low-status mode before you\'ve earned the discovery question.', cite: 'Unit 1.1 — Seven-second test' }
+            { text: '"Hi Helen! Sarah from Clear Path Coverage — how are you today?!" (bright, upbeat)', score: 0, level: 'incorrect', feedback: 'Eager-fast tonality on a subdued prospect. Senior-call principle: always pace below the prospect, never above. Bright-and-cheery against quiet-and-formal reads as pressure before you\'ve said three sentences.', cite: 'Unit 1.2 — Tonality matching' },
+            { text: '"Hi Helen. (pause) This is Sarah from Clear Path Coverage. Quick courtesy call — do you have a minute, or did I catch you at a bad time?"', score: 5, level: 'correct', feedback: 'Paced delivery, real pauses, permission gate with a respectful out. You\'re matching her energy without performing. She\'ll feel heard before you\'ve said anything substantive.', cite: 'Units 1.1 + 1.2' },
+            { text: '"Hi Helen, this is Sarah, sorry to bother you, I know you\'re busy, I just need a couple minutes of your time..."', score: 2, level: 'partial', feedback: 'Energy match is close, but apologetic framing undersells your professional posture. "Sorry to bother you" puts you in low-status mode before you\'ve earned the discovery question.', cite: 'Unit 1.1 — Seven-second test' }
           ]
         },
         {
@@ -4062,7 +4062,7 @@
         },
         {
           pillar: 'run', pillarLabel: 'Pillar 2 · Run', stage: 'Stage 2 — Problem Awareness',
-          setup: 'Five minutes in. Margaret mentioned her late husband Tom "used to handle the insurance." She takes 4 generics plus Eliquis monthly. You\'ve done basic situation discovery. Time to move into Problem Awareness.',
+          setup: 'Five minutes in. Helen mentioned her late husband Walter "used to handle the insurance." She takes 4 generics plus Eliquis monthly. You\'ve done basic situation discovery. Time to move into Problem Awareness.',
           prompt: 'What\'s your next question?',
           maxScore: 5,
           choices: [
@@ -4073,29 +4073,29 @@
         },
         {
           pillar: 'run', pillarLabel: 'Pillar 2 · Run', stage: 'Stage 4 — Math reframe',
-          setup: 'Margaret answers "home, definitely." She\'s engaged. She asks about cost. Time to land the math.',
+          setup: 'Helen answers "home, definitely." She\'s engaged. She asks about cost. Time to land the math.',
           prompt: 'How do you frame it?',
           maxScore: 5,
           choices: [
-            { text: '"The premium is $74 a month for Plan B. So that\'s $888 a year."', score: 0, level: 'incorrect', feedback: 'Leading with gross with no reframe is THE math mistake. $888 a year sounds terrifying without context. The Crash Course is explicit: pre-frame the gross as the number that doesn\'t matter, then land the net.', cite: 'Crash Course §5 — Math reframe' },
-            { text: '"Bear with me — I\'m going to give you the gross premium first, then the math that actually matters. Premium\'s $74/month. With Eliquis reimbursement plus your 4 generic fills, the net out-of-pocket is about $13 a month."', score: 5, level: 'correct', feedback: 'The pre-frame disarms the gross number; then you land the net. Verbatim move from the Crash Course. It works because it lets prospects hear both numbers without the first one breaking the conversation.', cite: 'Crash Course §5' },
+            { text: '"The premium is $63 a month for Plan B. So that\'s $756 a year."', score: 0, level: 'incorrect', feedback: 'Leading with gross with no reframe is THE math mistake. $756 a year sounds terrifying without context. The Crash Course is explicit: pre-frame the gross as the number that doesn\'t matter, then land the net.', cite: 'Crash Course §5 — Math reframe' },
+            { text: '"Bear with me — I\'m going to give you the gross premium first, then the math that actually matters. Premium\'s $63/month. With your 4 generic fills plus Eliquis brand reimbursement, that\'s the $600 Plan B cap — net out-of-pocket is about $13 a month."', score: 5, level: 'correct', feedback: 'The pre-frame disarms the gross number; then you land the net. Verbatim move from the Crash Course. It works because it lets prospects hear both numbers without the first one breaking the conversation.', cite: 'Crash Course §5' },
             { text: '"It\'s basically free — the Eliquis reimbursement alone covers most of the premium."', score: 2, level: 'partial', feedback: 'Right direction but "basically free" overpromises and triggers skepticism. "Net cost of about $13" is more honest and lands better. Compliance also frowns on "free."', cite: 'Crash Course §5 + §7' }
           ]
         },
         {
           pillar: 'handle', pillarLabel: 'Pillar 3 · Handle', stage: 'The curveball',
-          setup: 'Margaret was nodding along with the math. Then she pauses. "I\'m sorry, I just... my husband Tom passed eight months ago. He handled all of this. I\'m just trying..." Her voice breaks. She\'s crying quietly on the line.',
+          setup: 'Helen was nodding along with the math. Then she pauses. "I\'m sorry, I just... my husband Walter passed eight months ago. He handled all of this. I\'m just trying..." Her voice breaks. She\'s crying quietly on the line.',
           prompt: 'What do you do?',
           maxScore: 10,
           choices: [
             { text: '"Take a moment." (long pause) "We can absolutely come back to this another day if today isn\'t right." Then stay quiet and let her decide whether to continue.', score: 10, level: 'correct', feedback: 'Master move. Pause the call. Don\'t move forward until SHE invites it. The offer to reschedule is genuine, not a sales technique. Sales-mode and grief-mode are mutually exclusive — switch fully or not at all.', cite: 'Unit 3.8 — Emotional curveballs, Type 1' },
-            { text: '"I\'m so sorry, Margaret. That\'s incredibly hard. But you know what — this is exactly why having this kind of protection matters. Let me show you..."', score: 0, level: 'incorrect', feedback: 'Acknowledging then pivoting back to sales mode is worse than not acknowledging at all. The "but you know what" turn breaks her trust completely. Unit 3.8 names this exactly: switch fully or not at all.', cite: 'Unit 3.8' },
+            { text: '"I\'m so sorry, Helen. That\'s incredibly hard. But you know what — this is exactly why having this kind of protection matters. Let me show you..."', score: 0, level: 'incorrect', feedback: 'Acknowledging then pivoting back to sales mode is worse than not acknowledging at all. The "but you know what" turn breaks her trust completely. Unit 3.8 names this exactly: switch fully or not at all.', cite: 'Unit 3.8' },
             { text: '"I\'m so sorry. Take your time." (Wait 5 seconds, then:) "Should we keep going, or pick this up another day?"', score: 4, level: 'partial', feedback: 'You acknowledged and offered a reschedule, but you took the lead on when to continue. The master move waits for HER to invite the continuation. Letting her set the pace transfers control respectfully.', cite: 'Unit 3.8 — Type 1: Crying' }
           ]
         },
         {
           pillar: 'close', pillarLabel: 'Pillar 4 · Close', stage: 'The micro-close moment',
-          setup: 'Margaret took a minute, came back, and said "Tom would have wanted me to handle this." You finished the math. She\'s nodding, asking specific questions, energy is up. She just asked: "When would coverage start?"',
+          setup: 'Helen took a minute, came back, and said "Walter would have wanted me to handle this." You finished the math. She\'s nodding, asking specific questions, energy is up. She just asked: "When would coverage start?"',
           prompt: 'What\'s your move?',
           maxScore: 5,
           choices: [
@@ -4106,11 +4106,11 @@
         },
         {
           pillar: 'close', pillarLabel: 'Pillar 4 · Close', stage: 'After the yes',
-          setup: 'Margaret says: "Yes — I think it is."',
+          setup: 'Helen says: "Yes — I think it is."',
           prompt: 'What do you do next?',
           maxScore: 5,
           choices: [
-            { text: '"Great! Let me bring on the Advocate to walk through the application."', score: 2, level: 'partial', feedback: 'Misses Q2 — the persistency move. Skipping Q2 costs persistency in month 4 when Margaret can\'t remember why she bought. Q2 is the cheapest persistency insurance you\'ll do all day.', cite: 'Unit 4.3 — Double commit' },
+            { text: '"Great! Let me bring on the Advocate to walk through the application."', score: 2, level: 'partial', feedback: 'Misses Q2 — the persistency move. Skipping Q2 costs persistency in month 4 when Helen can\'t remember why she bought. Q2 is the cheapest persistency insurance you\'ll do all day.', cite: 'Unit 4.3 — Double commit' },
             { text: '"Tell me — why do you feel it is?" Then stay quiet and let her answer.', score: 5, level: 'correct', feedback: 'Q2 — the non-obvious move. She sells herself. Her own answer becomes the reason she remembers in month 4. The agent\'s reasons fade; the prospect\'s reasons stick.', cite: 'Unit 4.3 — Double commit' },
             { text: '"That\'s exactly right — and also it covers home care, ambulance, hospital benefits, and..."', score: 0, level: 'incorrect', feedback: 'Adding your own reasons after her yes dilutes the commitment. Unit 4.3 callout names this exactly: "what kills Q2." Let HER reason be the reason.', cite: 'Unit 4.3' }
           ]
@@ -4245,7 +4245,7 @@
         summary.appendChild(capMakeEl('div', 'mc-cap-summary-title', passed ? 'You\'re certified to take live calls.' : 'Close — a couple of pillars to sharpen.'));
         summary.appendChild(capMakeEl('p', 'mc-cap-summary-body', passed
           ? 'Your four-pillar competence is at the bar UNL agents need to hit. Generate your certificate below — print it for your records or share the verification ID with your pod leader.'
-          : 'You need 28 points total AND at least 5/10 on each individual pillar. Review the pillars below 5 and run the simulation again — Margaret will be patient.'));
+          : 'You need 28 points total AND at least 5/10 on each individual pillar. Review the pillars below 5 and run the simulation again — Helen will be patient.'));
 
         const totalDiv = capMakeEl('div', 'mc-cap-total');
         totalDiv.appendChild(capMakeEl('div', 'mc-cap-total-label', 'Total score'));
